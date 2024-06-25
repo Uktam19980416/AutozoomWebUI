@@ -24,8 +24,14 @@
 .nav__right {
   width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav__right_number {
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav__right__ul {
@@ -40,10 +46,34 @@
   margin-right: 1rem;
 }
 
-.nav__right__ul_li_a { 
+.nav__right__ul_li_a {
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav__right__ul_li_a::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__right__ul_li_a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+.nav__right__ul_li_a:hover {
+  color: #736d6d;
 }
 
 .nav__lang {
@@ -63,11 +93,12 @@
 
 .nav__search__input {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 0 1rem 3rem;
   border: none;
   border-radius: 5px;
   background: linear-gradient(90deg, #525151, #111219);
   color: #fff;
+  font-size: 1.2rem;
 }
 
 .nav__search__input:focus {
@@ -81,4 +112,81 @@
   color: #fff;
   cursor: pointer;
   font-size: 30px;
+}
+
+.nav__head_mobile {
+  display: none;
+}
+
+.navbar__right_bar {
+  display: none;
+}
+
+.nav__brand {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.nav__brand_inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__brand_text {
+  text-decoration: none;
+  color: #edeaea;
+}
+
+.nav__brand_img {
+  width: 30px;
+}
+
+.nav__brand_hover {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute; /* Ensure it appears over other elements */
+  /* top: 100%; Adjust as necessary */
+  left: 50%;
+  /* width: 100%; Adjust as necessary */
+  background-color: #41424a; /* Adjust as necessary */
+  padding: 1rem; /* Adjust as necessary */
+  border-radius: 20px; /* Adjust as necessary */
+}
+
+.nav__right__ul_li:hover .nav__brand_hover {
+  display: block;
+  opacity: 1;
+}
+
+/* For Mobile */
+@media screen and (max-width: 1280px) {
+  .nav__head {
+    display: none;
+  }
+
+  .nav__head_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1rem;
+    background-color: #111219;
+  }
+
+  .nav__right__ul_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .navbar__burger {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+  }
 }
