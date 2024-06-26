@@ -63,10 +63,13 @@ const CarsCard = () => {
                   slidesPerView: 3,  // 1200px and up
                 },
                 1156: {
-                  slidesPerView: 2,  // 1156px to 1199px
+                  slidesPerView: 3,  // 1156px to 1199px
                 },
-                800: {
-                  slidesPerView: 1,  // 800px to 1155px
+                780: {
+                  slidesPerView: 2,  // 700px to 1155px
+                },
+                320: {
+                  slidesPerView: 1,  // 320px to 699px
                 },
               }}
             >

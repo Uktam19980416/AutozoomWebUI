@@ -36,7 +36,7 @@
 }
 .model_name{
     color: #fff;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -47,7 +47,7 @@
 }
 .car-title{
     color: #b3b2b2;
-    font-size: 16px;
+    font-size: 19px;
     padding: 10px 0;
 }
 .add-top{
@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-top: 10px;
 }
 .left-icon{
     padding: 10px;
@@ -81,8 +82,132 @@
 }
 .card h2{
     color: #fff;
-    font-size: 19px;
+    font-size: 22px;
     font-weight: 400;
     letter-spacing: 2px;
     padding: 7px;
+}
+@media screen and (max-width: 780px) {
+    .card{
+        margin: 0 auto;
+        width: 450px;
+        height: 500px;
+    }
+    .card .card-image{
+        width: 350px;
+        margin: 0 auto;
+    }
+    .add-title{
+        font-size: 22px;
+    }
+    /* title */
+
+  
+    .card h2{
+        color: #fff;
+        font-size: 30px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding: 7px;
+    }
+    .model_name{
+        font-size: 34px;
+        padding-right: 5px;
+    }
+    .car-price{
+        color: #9e9a9a;
+        font-size: 22px;
+        font-weight: 300;
+    }
+    .car-title{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .card{
+        width: 350px;
+        height: 420px;
+    }
+    .card .card-image{
+        width: 260px;
+        
+        margin: 0 auto;
+    }
+    .add-title{
+        font-size: 16px;
+    }
+    .add-sublink{
+        gap: 6px;
+        padding-top: 15px;
+        font-size: 14px;
+    }
+    .left-icon{
+        padding: 5px;
+        font-size: 10px;
+    }
+    .card h2{
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        padding: 10px 0px;
+    }
+    .model_name{
+        font-size: 22px;
+        padding-right: 5px;
+    }
+    .car-price{
+        color: #9e9a9a;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .car-title{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .card{
+        margin: 0 auto;
+        width: 300px;
+        height: 430px;
+    }
+    .card .card-image{
+        width: 260px;
+    }
+    .add-title{
+        font-size: 16px;
+        width: 200px;
+    }
+    .add-sublink{
+        gap: 6px;
+        padding-top: 20px;
+        font-size: 15px;
+    }
+    .left-icon{
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 365px) {
+    .card{
+        width: 100%;
+        height: 430px;
+    }
+    .card .card-image{
+        width: 240px;
+    }
+    .add-title{
+        font-size: 14px;
+        width: 170px;
+        line-height: 20px;
+    }
+    .add-sublink{
+        gap: 6px;
+        padding-top: 20px;
+        font-size: 12px;
+    }
+    .left-icon{
+        padding: 5px;
+        font-size: 10px;
+    }
 }
