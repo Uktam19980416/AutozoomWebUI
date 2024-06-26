@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import './CarsCard.css';
+import { Link } from 'react-router-dom';
 
 const CarsCard = () => {
   const [cars, setCars] = useState([]);
@@ -21,7 +22,6 @@ const CarsCard = () => {
     fetch('https://autoapi.dezinfeksiyatashkent.uz/api/cars')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data?.data[0]?.car_images[0]?.image?.src);
         setCars(data?.data || []);
       })
       .catch((error) => {
@@ -46,32 +46,47 @@ const CarsCard = () => {
           <div key={index}>
             <div className='add-top'>
               <h1 className='add-title'>{category}</h1>
-              <a href="#" className='add-sublink'>SEE ALL <i className="left-icon fa-solid fa-chevron-right"></i></a>
+              <Link to={`/cars/${groupedCars[category][0]?.id}`} className='add-sublink'>
+                SEE ALL <i className="left-icon fa-solid fa-chevron-right"></i>
+              </Link>
             </div>
             <Swiper
               className="cards"
-              slidesPerView={3}  // Har safar 3 ta slayd ko'rsatiladi
-              spaceBetween={30} // Slaydlar orasidagi bo'shliq
+              slidesPerView={3}  // Default 3 slides
+              spaceBetween={30} // Space between slides
               pagination={{
                 clickable: true,
               }}
               modules={[Pagination]}
+              breakpoints={{
+                1200: {
+                  slidesPerView: 3,  // 1200px and up
+                },
+                1156: {
+                  slidesPerView: 2,  // 1156px to 1199px
+                },
+                800: {
+                  slidesPerView: 1,  // 800px to 1155px
+                },
+              }}
             >
               {groupedCars[category].map((car, carIndex) => (
                 <SwiperSlide key={carIndex}>
-                  <div className='card'>
-                    {car?.car_images[0]?.image?.src && (
-                      <img className='card-image' src={`${urlImg}${car?.car_images[0]?.image?.src}`} alt={car?.name} />
-                    )}
-                    <h2>{car?.brand?.title}</h2>
-                    <div className='hr' />
-                    <div>
-                      <span className='model_name'>{car?.model?.name}</span> 
-                      <span className='model_name'>{car?.price_in_aed}</span> 
-                      {car?.price_in_usd && <span className='car-price'>{` / $ ${car?.price_in_usd}`}</span>}
+                  <Link to={`/carsparams/${car?.id}`}>
+                    <div className='card'>
+                      {car?.car_images[0]?.image?.src && (
+                        <img className='card-image' src={`${urlImg}${car?.car_images[0]?.image?.src}`} alt={car?.name} />
+                      )}
+                      <h2>{car?.brand?.title}</h2>
+                      <div className='hr' />
+                      <div>
+                        <span className='model_name'>{car?.model?.name}</span>
+                        <span className='model_name'>{car?.price_in_aed}</span>
+                        {car?.price_in_usd && <span className='car-price'>{` / $ ${car?.price_in_usd}`}</span>}
+                      </div>
+                      <p className='car-title'>prev day</p>
                     </div>
-                    <p className='car-title'>prev day</p>
-                  </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

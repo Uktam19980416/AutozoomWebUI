@@ -24,7 +24,6 @@ function Navbar() {
   useEffect(() => {
     getFetch(`${base_URL}/brands`).then((data) => {
       setDatas(data?.data)
-      console.log(data?.data)
     })
   }, [])
 

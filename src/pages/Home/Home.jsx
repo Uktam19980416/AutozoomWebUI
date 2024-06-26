@@ -1,10 +1,11 @@
-import CarsCard from "../../components/CarsCard/CarsCard"
-
+import CarsCard from '../../components/CarsCard/CarsCard'
+import MainSlider from '../../components/MainSlider/MainSlider'
 function Home() {
   return (
-    <div>
-      <CarsCard/>
-    </div>
+    <>
+      <MainSlider />
+      <CarsCard />
+    </>
   )
 }
 
