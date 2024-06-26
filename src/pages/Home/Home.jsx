@@ -1,6 +1,10 @@
+import CarsCard from "../../components/CarsCard/CarsCard"
+
 function Home() {
   return (
-    <div></div>
+    <div>
+      <CarsCard/>
+    </div>
   )
 }
 
