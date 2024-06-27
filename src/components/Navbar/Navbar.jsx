@@ -164,7 +164,7 @@ function Navbar() {
             <Link className={styles.nav__right__ul_li_a}>Brand</Link>
           </li>
           <li className={styles.nav__right__ul_li}>
-            <Link className={styles.nav__right__ul_li_a} to="/service">
+            <Link className={styles.nav__right__ul_li_a} to="/services">
               Service
             </Link>
           </li>
