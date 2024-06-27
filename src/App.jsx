@@ -19,7 +19,7 @@ function App() {
       setLoading(false);
     }, 2000);
 
-    return () => clearTimeout(timer); // Cleanup the timer if the component unmounts
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
