@@ -1,18 +1,14 @@
-/* eslint-disable no-unused-vars */
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
-
-//Css Styles
 import './CarsParam.css';
-import './Responsive.css'
+import './Responsive.css';
 
-// import required modules
 import { Navigation, Pagination } from "swiper/modules";
 
-// import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,7 +25,6 @@ function App() {
     fetch(`${baseUrl}/cars`)
       .then((resp) => resp.json())
       .then((data) => {
-        /*       console.log(data?.data?.car_images?.image?.src); */
         console.log(data?.data);
         setData(data?.data);
       });
