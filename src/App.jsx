@@ -9,8 +9,16 @@ import CarsParam from './pages/CarsParam/CarsParam'
 import Service from './pages/Service/Service'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footerr'
+import { useEffect } from 'react'
+import { use } from 'i18next'
+import Loader from './components/Loader/Loader'
 
 function App() {
+  useEffect(() => {
+    setTimeout(() => {
+      return <Loader />
+    }, 2000)
+  }, [])
 
   return (
     <>

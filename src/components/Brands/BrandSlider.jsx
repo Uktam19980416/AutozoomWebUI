@@ -40,8 +40,9 @@ function MultipleRows() {
               alt={item.title}
               width={60}
               height={60}
+              className={styles.brand__img}
             />
-            <p>
+            <p className={styles.brand__text}>
               {item.title}
             </p>
           </div>

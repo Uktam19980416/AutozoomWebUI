@@ -2,3 +2,17 @@
   background-color: #1e1f27;
   padding: 20px 0;
 }
+
+.brand__images {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand__text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
