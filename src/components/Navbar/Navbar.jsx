@@ -95,7 +95,7 @@ function Navbar() {
                 )}
               </li>
               <li className={styles.nav__right__ul_li}>
-                <Link className={styles.nav__right__ul_li_a} to="/services">
+                <Link className={styles.nav__right__ul_li_a} to="/service">
                   Service
                 </Link>
               </li>
