@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 //Css Styles
 import './CarsParam.css';
-import './Responsive.css'
+import './Responsive.css';
 
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
