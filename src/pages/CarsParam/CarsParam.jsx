@@ -1,4 +1,4 @@
-/* 
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -439,4 +439,3 @@ function App() {
 }
 
 export default App;
- */
