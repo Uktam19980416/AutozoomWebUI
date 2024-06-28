@@ -76,7 +76,7 @@ const CarsCard = () => {
             >
               {groupedCars[category].map((car, carIndex) => (
                 <SwiperSlide key={carIndex}>
-                  <Link to={`/carsparams/${car.id}`}>
+                  <Link to={`/carsparams/${car.id}`} onClick={() => window.scrollTo({top:0})}>
                     <div className='card'>
                       {car?.car_images[0]?.image?.src && (
                         <img className='card-image' src={`${urlImg}${car?.car_images[0]?.image?.src}`} alt={car?.name} />

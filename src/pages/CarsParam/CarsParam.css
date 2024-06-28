@@ -185,6 +185,7 @@
   } */
 
   html {
+    overflow-x: hidden;
     background-color: #1e1f27;
   }
   .container__1 {
@@ -398,7 +399,7 @@
       border: 1px solid white;
       width: 250px;
     }
-    .mySwiper {
+    .mySwiperCars {
       width: 100%;
     }
   }
@@ -435,7 +436,7 @@
         border: 1px solid white;
         width: 250px;
       }
-      .mySwiper {
+      .mySwiperCars {
           width: 100%;
       }
   }
@@ -469,7 +470,7 @@
       padding: 10px;
       object-fit: cover;
   }
-  .mySwiper {
+  .mySwiperCars {
       width: 100%; 
   }
   }
@@ -501,7 +502,7 @@
       padding: 10px;
       object-fit: cover;
     }
-    .mySwiper {
+    .mySwiperCars {
       width: 100%;
     }
   }
@@ -538,7 +539,7 @@
   .row_flexed {
       width: 100%;
   } 
-  .mySwiper {
+  .mySwiperCars {
       width: 100%;
   }
   }
@@ -567,7 +568,7 @@
       padding: 10px;
       object-fit: cover;
     }
-  .mySwiper {
+  .mySwiperCars {
       width: 100%;
   }
   }

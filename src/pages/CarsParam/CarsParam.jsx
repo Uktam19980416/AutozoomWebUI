@@ -501,7 +501,7 @@ function CarsParam() {
                     navigation={true}
                     modules={[Navigation, Pagination]}
                     loop={false}
-                    className="mySwiper"
+                    className="mySwiperCars"
                   >
                     {data?.car_images &&
                       data?.car_images?.map((swiper, index) => (
