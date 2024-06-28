@@ -11,7 +11,6 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footerr'
 //28.06.2024 Changed
 function App() {
-
   return (
     <>
     <Navbar />
