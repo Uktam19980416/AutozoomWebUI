@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CarsCard from '../../components/CarsCard/CarsCard';
 import MainSlider from '../../components/MainSlider/MainSlider';
 import './Home.css'; // Ensure the CSS file is correctly placed
-
+import BrandsSection from '../../components/Brands/BrandsSection'
 function Home() {
   const [categories, setCategories] = useState([]);
   const [locations, setLocations] = useState([]);
