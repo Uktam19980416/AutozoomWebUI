@@ -28,12 +28,12 @@ function MultipleRows() {
     slidesToShow: 3,
     speed: 500,
     rows: 2,
-    slidesPerRow: 1, // Ensure each slide per row is treated as an individual slide
+    slidesPerRow: 1,
   };
 
   return (
     <div className={styles.slider__container}>
-      <Slider {...settings}>
+      {/* <Slider {...settings}>
         {datas.map((item) => (
           <div key={item.id} className={styles.brand__images}>
             <img
@@ -46,7 +46,7 @@ function MultipleRows() {
             </p>
           </div>
         ))}
-      </Slider>
+      </Slider> */}
     </div>
   );
 }
