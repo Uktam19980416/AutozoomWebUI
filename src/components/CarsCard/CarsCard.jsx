@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import './CarsCard.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const CarsCard = () => {
   const [cars, setCars] = useState([]);
@@ -76,7 +76,7 @@ const CarsCard = () => {
             >
               {groupedCars[category].map((car, carIndex) => (
                 <SwiperSlide key={carIndex}>
-                  <Link to={`/carsparams/${car?.id}`}>
+                  <Link to={`/carsparams/${car.id}`}>
                     <div className='card'>
                       {car?.car_images[0]?.image?.src && (
                         <img className='card-image' src={`${urlImg}${car?.car_images[0]?.image?.src}`} alt={car?.name} />
