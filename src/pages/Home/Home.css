@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #272933;
+
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.home-car {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
+  background-color: #282a34;
+  
+}
+
+.categories-car {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.category-car {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  margin-left: 10px;
+}
+
+.category-car img {
+  max-width: 200px;
+  height: 18vh;
+  margin-top: 20px;
+}
+
+.home-locations {
+  margin-top: 50px;
+  display: flex;
+  gap: 100px;
+}
+
+.home-link {
+  color: white;
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+.home-local-2, .home-local-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1250px) {
+  .categories-car {
+      flex-wrap: wrap;
+  }
+  .category-car {
+      flex: 1 1 calc(33.3333% - 10px);
+  }
+  .category-car img{
+    width: 500px;
+    height: 20vh;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .categories-car {
+      flex-wrap: wrap;
+  }
+  .category-car {
+      flex: 1 1 calc(33% - 10px);
+  }
+  .category-car img{
+    width: 500px;
+    height: 20vh;
+  }
+}
+}
+
+
+@media (max-width: 300px) {
+  .categories-car {
+      flex-wrap: nowrap;
+  }
+  .category-car {
+      flex: 0 0 auto;
+  }
+}
