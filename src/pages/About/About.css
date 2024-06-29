@@ -2,8 +2,8 @@
     padding-inline: 150px;
     padding-block: 10px;
     font-family: AvertaCY, sans-serif;
-    background-image: url('../assets/bg.png');
-    background-position: top top;
+    background-image: url('../../assets/images/bg.png');
+    background-position: center center;
     background-size: cover;
 }
 .about_header {
