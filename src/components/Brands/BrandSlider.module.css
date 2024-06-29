@@ -1,0 +1,33 @@
+.brand__bg {
+  background-color: #1e1f27;
+  padding: 20px 0;
+}
+
+/* .brand__images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5px;
+  border: 1px solid #fff;
+  height: 100%; 
+} */
+
+.brand__text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.brand__img {
+  width: 60px;
+  height: 60px;
+}
+.brand__images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  border: 1px solid #fff;
+}

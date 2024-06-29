@@ -11,3 +11,8 @@ body {
   font-family: 'Merriweather', serif;
   background-color: #111219;
 }
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import CarsCard from '../../components/CarsCard/CarsCard';
 import MainSlider from '../../components/MainSlider/MainSlider';
-import './Home.css'; // Ensure the CSS file is correctly placed
+import BrandsSection from '../../components/Brands/BrandsSection';
+import './Home.css'; 
 
 function Home() {
   const [categories, setCategories] = useState([]);
@@ -44,6 +45,7 @@ function Home() {
   return (
     <>
       <MainSlider />
+      <BrandsSection />
       <CarsCard />
       <div className="home-car">
         <div className="container">
