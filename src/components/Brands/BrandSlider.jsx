@@ -76,6 +76,7 @@ const Brands = () => {
       setDatas(data?.data)
     })
   }, [])
+  
   return (
     <div className='BrandWrapper'>
       <div className="container">
