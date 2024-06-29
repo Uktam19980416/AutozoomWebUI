@@ -4,6 +4,7 @@ import MainSlider from '../../components/MainSlider/MainSlider';
 import BrandsSection from '../../components/Brands/BrandsSection';
 import './Home.css'; 
 
+
 function Home() {
   const [categories, setCategories] = useState([]);
   const [locations, setLocations] = useState([]);
@@ -11,7 +12,7 @@ function Home() {
   const UrlImg = 'https://api.autozoomrental.com/api/uploads/images/';
 
   useEffect(() => {
-    // Fetch categories
+  
     fetch('https://api.autozoomrental.com/api/categories')
       .then((response) => response.json())
       .then((data) => {

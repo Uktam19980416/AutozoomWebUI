@@ -23,12 +23,12 @@ body {
 }
 
 .home-title {
-  text-align: center;
+  margin-bottom: 19px         ;
 }
 
 .categories-car {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow-x: auto;
   margin-bottom: 50px;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .category-car img {
-  max-width: 200px;
+  max-width:200px;
   height: 18vh;
   margin-top: 20px;
 }
@@ -88,6 +88,7 @@ body {
     height: 20vh;
   }
 }
+
 
 @media (max-width: 300px) {
   .categories-car {
