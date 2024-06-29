@@ -28,7 +28,7 @@ function Services() {
             <p className='services_sub_main_text'>Experience the thrill of a dune buggy tour in Dubai with us. We offer free hotel pick-up & drop-off service. Book now!</p>
             <div className='servicesLink'>
             <Link to={"/services/sport_car_rent"} onClick={() => window.scrollTo({top:0})} className='services_sub_main_link'>LEARN MORE </Link>
-            <Link to={"/services/sport_car_rent"}  onClick={() => window.scrollTo({top:0})} ><img src={shevronRight} className='shevronRight' alt="" /></Link>
+            <Link to={"/services/sport_car_rent"}   onClick={() => window.scrollTo({top:0})} ><img src={shevronRight} className='shevronRight services_sub_main_link' alt="" /></Link>
             </div>
         </div>
         </div>
@@ -39,7 +39,7 @@ function Services() {
             <p className='services_sub_main_text'>Professional car photoshoot as an additional type of service at Auto Zoom Car Rental</p>
             <div className='servicesLink'>
             <Link to={"/services/photoshoot-with-luxury-car-in-dubai"}  onClick={() => window.scrollTo({top:0})}  className='services_sub_main_link' >LEARN MORE </Link>
-            <Link to={"/services/photoshoot-with-luxury-car-in-dubai"}  onClick={() => window.scrollTo({top:0})} ><img src={shevronRight} className='shevronRight' alt="" /></Link>
+            <Link to={"/services/photoshoot-with-luxury-car-in-dubai"}  onClick={() => window.scrollTo({top:0})} ><img src={shevronRight} className='shevronRight services_sub_main_link' alt="" /></Link>
             </div>
         </div>
         </div>
