@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CarsCard from '../../components/CarsCard/CarsCard';
 import MainSlider from '../../components/MainSlider/MainSlider';
 import BrandsSection from '../../components/Brands/BrandsSection';
 import Faq from '../../components/Faq/faq'
+import Info from '../../components/InfoHome/Info'
+import Service from '../../pages/Service/Service';
 import './Home.css';
 
 function Home() {
@@ -51,6 +53,8 @@ function Home() {
       <MainSlider />
       <BrandsSection />
       <CarsCard />
+      <Service />
+      <Info />
       <Faq/>
 
 
