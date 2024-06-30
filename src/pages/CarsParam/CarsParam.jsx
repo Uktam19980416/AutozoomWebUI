@@ -449,6 +449,8 @@ import "swiper/css/navigation";
 //CSS Styles
 import "./CarsParam.css";
 
+import carImg from '../../assets/images/carsImg1.png';
+
 import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
@@ -520,12 +522,12 @@ function CarsParam() {
               <h3 className="heading-1">
                 Good to know about {data?.model?.name}
               </h3>
-              <p className="p-1">Kilometrage limit per day</p>
+              <p className="greyishText-1">Kilometrage limit per day</p>
               <h4>
                 {data?.max_speed} (Every extra km will be charged
                 {data?.transmission} AED/km)
               </h4>
-              <p className="p-1">Car rental deposit amount</p>
+              <p className="greyishText-1">Car rental deposit amount</p>
               <h4>The deposit is refunded within {data?.deposit} days</h4>
             </div>
           </div>
@@ -883,6 +885,262 @@ function CarsParam() {
           </div>
         </div>
       </div>
+      <div className="container__1">
+          <div className="Cars_container_main_cars2">
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          <div className='Cars_container_main_car2'>
+              <div className='Cars_container_main_car_imgContainer2'>
+              <img src={carImg} alt=""  width={200} height={200}/>
+              </div>
+              <div className='Cars_container_main_car_info2'>
+              <h5 className='Cars_container_main_car_heading2'>Dodge Challenger</h5>
+              <p><span className='Cars_container_main_car_price_in_aed2'>AED 450</span> <span className='Cars_container_main_car_price_in_usd2'>/ $ 200</span></p>
+              <p className='Cars_container_main_car_price_in_usd2'>per day</p>
+              <div className='Cars_container_main_car_info2_buttons2'>
+              <div className='Cars_container_main_car_info2_btn_whatsApp2'>
+                <button><i className="fa-brands fa-whatsapp"></i> WhatsApp</button>
+              </div>
+              <div className='Cars_container_main_car_info2_btn_telegram2'>
+                <button><i className="fa-brands fa-telegram"></i> Telegram</button>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   );
 }
