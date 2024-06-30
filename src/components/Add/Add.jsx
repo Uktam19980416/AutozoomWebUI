@@ -30,31 +30,31 @@ function Add() {
             </div>
             <h3 className='Add_col_head_info'>Package Inclusions:</h3>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Premium Transfer to camp</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Dune Buggy riding 1.5 hours</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Cuadro 15 min</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Falcone shoting</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Camel</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>VIP room</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Fruits, Drinks, BBQ</span>
             </div>
             <div className='Add_col_main_btn'><button>BOOK NOW</button></div>
@@ -68,36 +68,36 @@ function Add() {
           </div>
             <div className='Add_col_text'>
             <p>
-            1asasa2334343434Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.
+            Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.
             </p>
             </div>
             <h3 className='Add_col_head_info'>Package Inclusions:</h3>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Premium Transfer to camp</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Dune Buggy riding 1.5 hours</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Cuadro 15 min</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Falcone shoting</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Camel</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>VIP room</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Fruits, Drinks, BBQ</span>
             </div>
             <div className='Add_col_main_btn'><button>BOOK NOW</button></div>
@@ -111,36 +111,36 @@ function Add() {
           </div>
             <div className='Add_col_text'>
             <p>
-            1asasa2334343434Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.
+            Dune buggies in Dubai Book your ride on the most exciting adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.
             </p>
             </div>
             <h3 className='Add_col_head_info'>Package Inclusions:</h3>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Premium Transfer to camp</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Dune Buggy riding 1.5 hours</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Cuadro 15 min</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Falcone shoting</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Camel</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>VIP room</span>
             </div>
             <div className='Add_col_status'>
-              <img src={checkedImg} width={25} height={25} alt="" />
+              <img src={checkedImg} width={45} height={25} alt="" />
               <span>Fruits, Drinks, BBQ</span>
             </div>
             <div className='Add_col_main_btn'><button>BOOK NOW</button></div>
