@@ -2,6 +2,8 @@
 import "./Blog.css";
 import "./Blog_resp.css";
 
+import { Link } from "react-router-dom";
+
 //Images Imported
 import blogImg1 from "../../assets/images/blogImg1.jpg";
 import blogImg2 from "../../assets/images/blogImg2.jpg";
@@ -42,7 +44,7 @@ function Blog() {
             </p>
             <div className="Blog_col_info_col">
               <span>25 Seb 2022</span>
-              <img src={shevronRight} alt="" width={30} height={30} />
+              <Link to={`/blog/blog_info_1`} onClick={scrollTo({top:0})}> <img src={shevronRight} alt="" className="shevronRight" width={30} height={30} /></Link>
             </div>
           </div>
         </div>
@@ -72,7 +74,7 @@ function Blog() {
             </p>
             <div className="Blog_col_info_col">
               <span>11 Feb 2022</span>
-              <img src={shevronRight} alt="" width={30} height={30} />
+              <Link to={`/blog/blog_info_2`} onClick={scrollTo({top:0})}> <img src={shevronRight} alt="" className="shevronRight" width={30} height={30} /></Link>
             </div>
           </div>
         </div>
@@ -98,13 +100,7 @@ function Blog() {
             </p>
             <div className="Blog_col_info_col">
               <span>31 Jul 2022</span>
-              <img
-                src={shevronRight}
-                className="shevronRight"
-                alt=""
-                width={30}
-                height={30}
-              />
+              <Link to={`/blog/blog_info_3`} onClick={scrollTo({top:0})}> <img src={shevronRight} alt="" className="shevronRight" width={30} height={30} /></Link>
             </div>
           </div>
         </div>

@@ -51,6 +51,9 @@
   padding-inline-start: 35px;
   justify-content: space-between;
 }
-.Blog_col_info_col .shevronRight {
-  transform: translateX(20px);
+.shevronRight {
+  transition: all .8s;
+}
+.shevronRight:hover {
+  transform: translateX(10px);
 }
