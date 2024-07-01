@@ -241,7 +241,6 @@ function CarsParam() {
                 </div>
               </div>
             </div>
-            <hr style={{background:"white", display:"inline-block", height:"3px", width:"100%"}}/>
             <div className="row_1 row_flexed">
               <div className="col-lg-2">
                 <div>
@@ -360,6 +359,7 @@ function CarsParam() {
               </div>
             </div>
           </div>
+          <hr style={{background:"white", display:"inline-block", height:"3px", width:"100%"}}/>
           <div className="row_1">
             <div className="col-lg-6_2">
               <a
