@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CarsAll.css";
+import './CarsAll_resp.css';
 
 function CarsAll() {
   const [cars, setCars] = useState([]);
@@ -26,7 +27,7 @@ function CarsAll() {
 
   return (
     <div>
-      <div className="container__1">
+      <div className="carsAll_container__">
         <div className="Cars_container_main_cars2">
           {cars &&
             cars?.map((car, index) => (
