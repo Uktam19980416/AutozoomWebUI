@@ -195,6 +195,18 @@ html {
     flex-direction: column;
     padding: 0;
   }
+  .imgContainer .subname {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    height: 120px;
+    letter-spacing: -0.02em;
+    line-height: 125.5%;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+}
   .imgContainer {
     margin: 0;
     width: 100%;
