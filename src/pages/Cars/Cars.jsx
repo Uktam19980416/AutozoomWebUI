@@ -4,6 +4,7 @@ import './Cars.css'
 //Car Image
 import carImg from '../../assets/images/carsImg1.png'
 import { useEffect, useState } from 'react'
+import CarsAll from '../CarsAll/CarsAll'
 
 function Cars() {
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
@@ -214,7 +215,7 @@ function Cars() {
             <span>/ Hire the latest supercar</span>
           </a>
         </div>
-        <div className="Cars_container_main_cars">
+        {/* <div className="Cars_container_main_cars">
           <div className="Cars_container_main_car">
             <div className="Cars_container_main_car_imgContainer">
               <img src={carImg} alt="" width={200} height={200} />
@@ -711,7 +712,8 @@ function Cars() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <CarsAll />
       </div>
     </div>
   )

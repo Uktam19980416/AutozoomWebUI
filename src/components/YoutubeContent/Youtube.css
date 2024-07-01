@@ -1,0 +1,32 @@
+.youtube__block {
+  display: flex;
+  gap: 2rem;
+}
+
+.youtube__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.youtube__right_title {
+  font-size: 40px;
+  color: azure;
+}
+
+.youtube__right_text {
+  font-size: 18px;
+  color: azure;
+  line-height: 30px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link__text {
+  font-size: 18px;
+  color: azure;
+}

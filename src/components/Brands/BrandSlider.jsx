@@ -92,10 +92,10 @@ const Brands = () => {
               clickable: true,
             }}
             modules={[Grid, Pagination]}
-            className="mySwiper"
+            className="mySwipercon"
           >
             {datas.map((item) => (
-              <SwiperSlide key={item.id} className="swiper__slider">
+              <SwiperSlide key={item.id} className="swiper-slidebrand">
                 <Link to={`/cars/${item.id}`} className="brand__images">
                   <img
                     src={`${base_URL2}${item.image_src}`}

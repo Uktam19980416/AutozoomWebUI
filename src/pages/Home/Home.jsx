@@ -6,6 +6,7 @@ import Faq from '../../components/Faq/faq'
 import Info from '../../components/InfoHome/Info'
 import Service from '../../pages/Service/Service';
 import './Home.css';
+import Youtube from '../../components/YoutubeContent/Youtube';
 
 function Home() {
   const [categories, setCategories] = useState([]);
@@ -55,6 +56,7 @@ function Home() {
       <CarsCard />
       <Service />
       <Info />
+      <Youtube />
       <Faq/>
 
 
