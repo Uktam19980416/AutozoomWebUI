@@ -185,7 +185,7 @@ function Cars() {
       <div className="Cars_container_main">
         <div className="Cars_container_main_header">
           <a href="/" className="Cars_container_main_link">
-            <span>Luxury Cars for Rent in Dubai </span>{" "}
+            <span>Luxury Cars for Rent in Dubai </span>
             <span>/ Hire the latest supercar</span>
           </a>
         </div>
