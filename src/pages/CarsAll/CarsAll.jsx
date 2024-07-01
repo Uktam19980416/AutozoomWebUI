@@ -22,12 +22,6 @@ function CarsAll( {getData} ) {
       .catch((err) => console.error(err));
   };
 
-  const handleChange = () => {
-    setTimeout(() => {
-      getData();
-    }, 100)
-  }
-
   useEffect(() => {
     getCars();
   }, []);
@@ -43,7 +37,6 @@ function CarsAll( {getData} ) {
                   to={`/carsparams/${car?.id}`}
                   style={{ textDecoration: "none" }}
                   onClick={() => {
-                    handleChange();
                     scrollTo({ top: 0 });
                   }}
                 >

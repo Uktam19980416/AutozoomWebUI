@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 //CSS Styles
 import "./CarsParam.css";
 
-import carImg from "../../assets/images/carsImg1.png";
+// import carImg from "../../assets/images/carsImg1.png";
 
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -42,7 +42,7 @@ function CarsParam() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [id]);
 
   return (
     <div>

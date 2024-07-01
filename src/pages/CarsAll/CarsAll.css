@@ -62,6 +62,7 @@
 }
 .Cars_container_main_car_info2_btn_whatsApp2 button{
   margin-right: 5px;
+  cursor: pointer;
   align-items: center;
   border-radius: 10px;
   color: #fff;
@@ -76,6 +77,7 @@
 .Cars_container_main_car_info2_btn_telegram2 button {
   align-items: center;
   border-radius: 10px;
+  cursor: pointer;
   color: #fff;
   display: flex;
   font-size: 18px;
