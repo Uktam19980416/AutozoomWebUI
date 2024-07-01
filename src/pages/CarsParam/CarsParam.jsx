@@ -59,7 +59,7 @@ function CarsParam() {
     <div>
       <div className="container__1">
         <div className="imgContainer">
-          <h1 className="subname">{data?.model?.name}</h1>
+          <h1 className="subname">{`${data?.brand?.title} ${data?.model?.name}`}</h1>
           <div className="row">
             <div className="col-lg-6">
               <div className="sideImg">
