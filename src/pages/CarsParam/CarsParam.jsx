@@ -40,18 +40,8 @@ function CarsParam() {
       });
   };
 
-  /*  const getCars = () => {
-    fetch(`${baseUrl}/cars`)
-      .then((resp) => resp.json())
-      .then((info) => {
-        setCars(info?.data);
-        console.log(info?.data);
-      })
-      .catch((err) => console.error(err))} */
-
   useEffect(() => {
     getData();
-    // getCars();
   }, []);
 
   return (
@@ -462,7 +452,7 @@ function CarsParam() {
           </div>
         </div>
       </div>
-      <CarsAll />
+      <CarsAll getData={getData}/>
     </div>
   );
 }

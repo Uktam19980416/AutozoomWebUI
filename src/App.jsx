@@ -20,6 +20,7 @@ import BlogInfo from "./components/BlogInfo/BlogInfo";
 import blogInfoImg1 from "../src/assets/images/blogImg1.jpg";
 import blogInfoImg2 from "../src/assets/images/blogImg2.jpg";
 import blogInfoImg3 from "../src/assets/images/blogImg3.jpg";
+import CarsAll from "./pages/CarsAll/CarsAll";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/cars" element={<Cars />} />
         <Route path="/carsparams/:id" element={<CarsParam />} />
+        <Route path="/carsparams/:id" element={<CarsAll/>}/>
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/blog" element={<Blog />} />
         {/* <Route path="/services" element={<CarsParam />} /> */}
