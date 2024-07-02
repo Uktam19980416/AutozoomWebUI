@@ -10,7 +10,6 @@
 
 .rental__left_img {
   width: 100%;
-  object-fit: cover;
   filter: hue-rotate(320deg);
 }
 
@@ -28,4 +27,32 @@
 .rental__right_text {
   font-size: 20px;
   color: #fff
+}
+
+/* Rental Responsive */
+@media (min-width: 320px) and (max-width: 500px) {
+  .rental__block {
+    flex-direction: column;
+  }
+  .rental__left {
+    width: 100%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 750px) {
+  .rental__block {
+    flex-direction: column;
+  }
+  .rental__left {
+    width: 100%;
+  }
+}
+
+@media (min-width: 750px) and (max-width:1000px) {
+  .rental__block {
+    flex-direction: column;
+  }
+  .rental__left {
+    width: 100%;
+  }
 }
