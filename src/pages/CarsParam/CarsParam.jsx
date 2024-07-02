@@ -64,7 +64,7 @@ function CarsParam() {
               </div>
               <Swiper
                 navigation={true}
-                modules={[Navigation, Pagination]}
+                // modules={[Navigation, Pagination]}
                 loop={false}
                 className="mySwiperCars"
               >
