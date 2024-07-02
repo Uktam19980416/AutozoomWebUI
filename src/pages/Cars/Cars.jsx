@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import CarsAll from '../CarsAll/CarsAll'
 
 
-import menuIcon from '../../assets/images/menuIcon.svg'
+import menuIcon from '../../assets/react.svg'
 
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true);
@@ -108,6 +108,8 @@ function Cars() {
               <input type="checkbox" id={`carType${item.category_id}`} />
               <label htmlFor={`carType${item.category_id}`}>
 
+              <input type="checkbox" id={idx} />
+              <label htmlFor={idx}>
                 {item.category.name_en}
               </label>
             </div>
@@ -138,12 +140,12 @@ function Cars() {
             <label htmlFor="carType7">Muscle</label>
           </div> */}
 
+
         </div>
         <div className="Cars_sidebar_main_brand">
           <div className="Cars_sidebar_brand_header">Brand</div>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
-
               <input type="checkbox" id={idx} />
               <label htmlFor={idx}>{item.brand.title}</label>
             </div>
@@ -229,10 +231,12 @@ function Cars() {
             <label htmlFor="brand21">Mitsubishi</label>
           </div> */}
 
+
               <input type="checkbox" id={`brand${item.brand.id}`} />
               <label htmlFor={`brand${item.brand.id}`}>{item.brand.title}</label>
             </div>
           ))}
+
 
         </div>
         <div className="Cars_sidebar_modal">
@@ -757,6 +761,7 @@ function Cars() {
         </div> */}
         <CarsAll />
 
+        <div className='CarsAllComponent'><CarsAll /></div>
         <div className='CarsAllComponent'><CarsAll /></div>
 
       </div>
