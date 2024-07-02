@@ -6,8 +6,16 @@ import { FaBarsStaggered } from 'react-icons/fa6'
 import logo from '../../assets/images/logo.svg'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { changeLanguage } from 'i18next'
 
-function Navbar() {
+function Navbar() { 
+  const { t, i18n } = useTranslation()
+  const languages = localStorage.getItem('i18nextLng') || 'uz';
+
+  const handleChange = (lang) => {
+    i18n.changeLanguage(lang);
+  };
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
   const base_URL2 =
     'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/'
@@ -34,12 +42,14 @@ function Navbar() {
           <div className={styles.nav__left}>
             <div className={styles.nav__lang}>
               <img
+              onClick={() => handleChange('en')}
                 className={styles.nav__lang__img}
                 width={20}
                 src={en}
                 alt="En"
               />
               <img
+              onClick={() => handleChange('ru')}
                 className={styles.nav__lang__img}
                 width={20}
                 src={ru}
@@ -64,7 +74,7 @@ function Navbar() {
             <ul className={styles.nav__right__ul}>
               <li className={styles.nav__right__ul_li}>
                 <Link className={styles.nav__right__ul_li_a} to="/cars">
-                  Cars
+                  {t("cars")}
                 </Link>
               </li>
               <li
@@ -72,7 +82,7 @@ function Navbar() {
                 onMouseEnter={() => setIsBrandHover(true)}
                 onMouseLeave={() => setIsBrandHover(false)}
               >
-                <Link className={styles.nav__right__ul_li_a}>Brand</Link>
+                <Link className={styles.nav__right__ul_li_a}>{t("brand")}</Link>
                 {isBrandHover && (
                   <div className={styles.nav__brand_hover}>
                     <div className={styles.nav__brand}>
@@ -96,22 +106,22 @@ function Navbar() {
               </li>
               <li className={styles.nav__right__ul_li}>
                 <Link className={styles.nav__right__ul_li_a} to="/services">
-                  Service
+                  {t("service")}
                 </Link>
               </li>
               <li className={styles.nav__right__ul_li}>
                 <Link className={styles.nav__right__ul_li_a} to="/about">
-                  About Us
+                  {t("about")}
                 </Link>
               </li>
               <li className={styles.nav__right__ul_li}>
                 <Link className={styles.nav__right__ul_li_a} to="/contacts">
-                  Contacts
+                  {t("contacts")}
                 </Link>
               </li>
               <li className={styles.nav__right__ul_li}>
                 <Link className={styles.nav__right__ul_li_a} to="/blog">
-                  Blog
+                  {t("blog")}
                 </Link>
               </li>
             </ul>
@@ -157,30 +167,30 @@ function Navbar() {
         <ul className={styles.nav__right__ul_mobile}>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/cars">
-              Cars
+              {t("cars")}
             </Link>
           </li>
           <li className={styles.nav__right__ul_li}>
-            <Link className={styles.nav__right__ul_li_a}>Brand</Link>
+            <Link className={styles.nav__right__ul_li_a}>{t("brand")}</Link>
           </li>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/services">
-              Service
+              {t("service")}
             </Link>
           </li>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/about">
-              About Us
+              {t("about")}
             </Link>
           </li>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/contacts">
-              Contacts
+              {t("contacts")}
             </Link>
           </li>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/blog">
-              Blog
+              {t("blog")}
             </Link>
           </li>
         </ul>

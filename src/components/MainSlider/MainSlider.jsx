@@ -1,19 +1,20 @@
+import { useTranslation } from 'react-i18next'
 import CenterMode from './CenterMode'
 import styles from './MainSlider.module.css'
 
 function MainSlider() {
+  const {t} = useTranslation()
   return (
     <div className={styles.slider__container}>
       <div className={styles.slider__title}>
-        <p className={styles.title}>TOP LUXURY CAR</p>
-        <p className={styles.title}>RENTAL DUBAI</p>
+        <p className={styles.title}>{t("navbar1")}</p>
+        <p className={styles.title}>{t("navbar2")}</p>
         <div className={styles.sub__title_block}>
           <p className={styles.sub__title}>
-            Best sports car & supercar rental Dubai, Exclusive offers on luxury
-            car rental Dubai Cheap price
+          {t("navbar3")}
           </p>
         </div>
-        <p className={styles.link__text}>RENT A CAR DUBAI CATALOG</p>
+        <p className={styles.link__text}>{t("navbar4")}</p>
       </div>
       <CenterMode />
     </div>
