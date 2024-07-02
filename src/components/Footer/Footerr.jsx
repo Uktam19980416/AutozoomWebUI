@@ -45,7 +45,7 @@ function Footer() {
 
           <div className="footer_part">
             <h3 className="footer_blog"><Link to="/blog" className="Link">BLOG</Link></h3>
-            <h3 className="footer_service"><Link to="/service" className="Link">SERVICE</Link></h3>
+            <h3 className="footer_service"><Link to="/services" className="Link">SERVICE</Link></h3>
             <div>
               <h3 className="footer_contact"><Link to="/contacts" className="Link">CONTACTS</Link></h3>
               <p className="footer_text">
@@ -61,9 +61,9 @@ function Footer() {
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_about"><Link to="/about-us" className="Link">ABOUT US</Link></h3>
+            <h3 className="footer_about"><Link to="/about" className="Link">ABOUT US</Link></h3>
             <p className="footer_text2"><Link to="/our-team" className="Link">Our Team</Link></p>
-            <p className="footer_text2"><Link to="/faq" className="Link">FAQ</Link></p>
+            <p className="footer_text2"><Link to="/Faq" className="Link">FAQ</Link></p>
             <h3 className="footer_follow">Follow Us</h3>
             <div className="follow_icon">
               <Link to="https://www.instagram.com/autozoomrental" target="_blank" className="Link"><FaInstagram size={25} /></Link>
@@ -84,7 +84,7 @@ function Footer() {
             <hr />
             <div className="line_box">
               <p>© 2024 Auto Zoom Car Rental.<br />United Arab Emirates.</p>
-              <p><Link to="/terms-and-conditions" className="Link">Terms and Conditions</Link></p>
+              <p><Link to="/terms" className="Link">Terms and Conditions</Link></p>
             </div>
           </div>
         </div>
