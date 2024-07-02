@@ -8,7 +8,6 @@ body {
   width: 100%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #272933;
-
 }
 
 .container {
@@ -17,24 +16,29 @@ body {
 }
 
 .home-car {
-  display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
   color: white;
   background-color: #282a34;
-  
+  font-family: sans-serif;
+}
+
+.home-title {
+  margin-bottom: 19px;
 }
 
 .categories-car {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow-x: auto;
+  margin-bottom: 50px;
 }
 
 .category-car {
   flex: 0 0 auto;
   margin: 0 5px;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 .category-car img {
@@ -44,9 +48,9 @@ body {
 }
 
 .home-locations {
-  margin-top: 50px;
   display: flex;
-  gap: 100px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .home-link {
@@ -55,46 +59,68 @@ body {
   text-decoration: underline;
 }
 
-.home-local-2, .home-local-1 {
+.home-local-2,
+.home-local-1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Responsive styles */
-@media (max-width: 1250px) {
+@media (max-width: 500px) {
   .categories-car {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
   }
-  .category-car {
-      flex: 1 1 calc(33.3333% - 10px);
-  }
-  .category-car img{
-    width: 500px;
-    height: 20vh;
-  }
-}
 
-@media (max-width: 1199px) and (min-width: 768px) {
-  .categories-car {
-      flex-wrap: wrap;
-  }
   .category-car {
-      flex: 1 1 calc(33% - 10px);
+    flex: 1 0 90%;
+    display: flex;
+
+    justify-content: center;
   }
-  .category-car img{
-    width: 500px;
-    height: 20vh;
+
+  .category-car img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 20px;
   }
 }
 
 
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+}
 
-@media (max-width: 300px) {
-  .categories-car {
-      flex-wrap: nowrap;
-  }
-  .category-car {
-      flex: 0 0 auto;
-  }
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
