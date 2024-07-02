@@ -16,16 +16,8 @@ import Services from "./pages/Service/Service";
 import Add from "./components/Add/Add";
 import Add2 from "./components/Add2/Add2";
 import BlogInfo from "./components/BlogInfo/BlogInfo";
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footerr';
-import Loader from './components/Loader/Loader';
-import CarsParam from './pages/CarsParam/CarsParam';
-import Services from './pages/Service/Service';
-import Add from './components/Add/Add';
-import Add2 from './components/Add2/Add2';
-import BlogInfo from './components/BlogInfo/BlogInfo';
-import Faq from './components/Faq/faq'
-import Terms from './pages/Terms/terms'
+import Faq from './components/Faq/faq';
+import Terms from './pages/Terms/terms';
 
 //BlogInfo Images Imported
 import blogInfoImg1 from "../src/assets/images/blogImg1.jpg";
