@@ -9,26 +9,27 @@ import service2 from "../../assets/images/service2.jpg";
 //Shevron-right
 import shevronRight from "../../assets/images/shevron.svg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Services() {
+  const {t} = useTranslation()
   return (
     <div className="Services">
       <div className="services_head">
         <Link to={"/"} className="services_head_link">
-          <span>Luxury Cars for Rent in Dubai</span> <span>/ Services</span>
+          <span>{t("serviceCard1")}</span> <span>/ {t("service")}</span>
         </Link>
-        <h1 className="services_header">SERVICES</h1>
+        <h1 className="services_header">{t("service")}</h1>
       </div>
       <div className="services_main">
         <div className="services_sub_main_1">
           <img src={service1} className="serviceImg" alt="" />
           <div className="services_sub_main_space">
             <h4 className="services_sub_main_info">
-              Sports Car Rental Dubai Style Tour in Dubai
+           {t("serviceCard2")}
             </h4>
             <p className="services_sub_main_text">
-              Experience the thrill of a dune buggy tour in Dubai with us. We
-              offer free hotel pick-up & drop-off service. Book now!
+            {t("servicesCard3")}
             </p>
             <div className="servicesLink">
               <Link
@@ -36,7 +37,7 @@ function Services() {
                 onClick={() => window.scrollTo({ top: 0 })}
                 className="services_sub_main_link"
               >
-                LEARN MORE{" "}
+                {t("servicesCard4")}{" "}
               </Link>
               <Link
                 to={"/services/sport_car_rent"}
@@ -55,11 +56,10 @@ function Services() {
           <img src={service2} className="serviceImg" alt="" />
           <div className="services_sub_main_space">
             <h4 className="services_sub_main_info">
-              Photoshoot with luxury car rental Dubai
+              {t("servicesCard5")}
             </h4>
             <p className="services_sub_main_text">
-              Professional car photoshoot as an additional type of service at
-              Auto Zoom Car Rental
+              {t("serviceCard6")}
             </p>
             <div className="servicesLink">
               <Link
