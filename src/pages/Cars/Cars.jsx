@@ -24,8 +24,7 @@ function Cars() {
     return await response.json()
   }
 
-<<<<<<< HEAD
-=======
+
   const handleMenuChange = () => {
   const sidebarBlock = document.getElementById("sidebarBlock");
   const carsMainBlock = document.getElementById("carsMain");
@@ -42,7 +41,6 @@ function Cars() {
   setMenuOpen(!menuOpen);
   }
 
->>>>>>> origin/Quvomiddin
   useEffect(() => {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatas(data?.data)
@@ -51,6 +49,7 @@ function Cars() {
   }, [])
 
   return (
+    <>
     <div className="Cars_container_">
       <div className='carsSidebarMenu' onClick={handleMenuChange} >
           <img src={menuIcon} width={30} height={30} alt="" />
@@ -102,18 +101,18 @@ function Cars() {
           <h4 className="Cars_sidebar_carType_header">Car Type</h4>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_carType_info" key={idx}>
-<<<<<<< HEAD
+
               <input type="checkbox" id={idx} />
               <label htmlFor={idx}>
-=======
+
               <input type="checkbox" id={`carType${item.category_id}`} />
               <label htmlFor={`carType${item.category_id}`}>
->>>>>>> origin/Quvomiddin
+
                 {item.category.name_en}
               </label>
             </div>
           ))}
-<<<<<<< HEAD
+
           {/* <div className="Cars_sidebar_carType_info">
             <input type="checkbox" id="carType2" />
             <label htmlFor="carType2">Sports Cars</label>
@@ -138,14 +137,13 @@ function Cars() {
             <input type="checkbox" id="carType7" />
             <label htmlFor="carType7">Muscle</label>
           </div> */}
-=======
->>>>>>> origin/Quvomiddin
+
         </div>
         <div className="Cars_sidebar_main_brand">
           <div className="Cars_sidebar_brand_header">Brand</div>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
-<<<<<<< HEAD
+
               <input type="checkbox" id={idx} />
               <label htmlFor={idx}>{item.brand.title}</label>
             </div>
@@ -230,12 +228,12 @@ function Cars() {
             <input type="checkbox" id="brand21" />
             <label htmlFor="brand21">Mitsubishi</label>
           </div> */}
-=======
+
               <input type="checkbox" id={`brand${item.brand.id}`} />
               <label htmlFor={`brand${item.brand.id}`}>{item.brand.title}</label>
             </div>
           ))}
->>>>>>> origin/Quvomiddin
+
         </div>
         <div className="Cars_sidebar_modal">
           <div className="Cars_sidebar_model_info">Model</div>
@@ -258,7 +256,7 @@ function Cars() {
             <span>/ Hire the latest supercar</span>
           </a>
         </div>
-<<<<<<< HEAD
+
         {/* <div className="Cars_container_main_cars">
           <div className="Cars_container_main_car">
             <div className="Cars_container_main_car_imgContainer">
@@ -758,11 +756,12 @@ function Cars() {
           </div>
         </div> */}
         <CarsAll />
-=======
+
         <div className='CarsAllComponent'><CarsAll /></div>
->>>>>>> origin/Quvomiddin
+
       </div>
     </div>
+    </>
   )
 }
 
