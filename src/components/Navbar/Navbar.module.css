@@ -118,7 +118,7 @@
   display: none;
 }
 
-.navbar__right_bar {
+.navbar__right_bar, .menu_toggle {
   display: none;
 }
 
@@ -191,7 +191,7 @@
   }
 }
 
-#menu-toggle:checked ~ .toggled-bar {
+#menu-toggle:checked ~ .navbar__right_bar {
   left: 0;
 }
 #menu-toggle:checked ~ body {

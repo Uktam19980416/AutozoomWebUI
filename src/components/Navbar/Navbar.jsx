@@ -148,10 +148,14 @@ function Navbar() {
             </Link>
           </div>
           <div>
-            <FaBarsStaggered className={styles.navbar__burger} />
+            <label htmlFor="menu-toggle">
+              <FaBarsStaggered className={styles.navbar__burger} />
+            </label>
           </div>
         </div>
       </div>
+
+      <input type="checkbox" id="menu-toggle" className={styles.menu_toggle} />
 
       <div className={styles.navbar__right_bar}>
         <ul className={styles.nav__right__ul_mobile}>
