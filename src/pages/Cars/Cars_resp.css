@@ -79,7 +79,7 @@
         width: 68%;
         margin: 0 auto;
         height: auto;
-      }
+    }
     .Cars_container_main#carsMain.carsMainBlock {
         display: none;
     }
@@ -111,5 +111,43 @@
     }
     .Cars_container_main#carsMain.carsMainBlock {
         display: none;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    #sidebarBlock.Cars_sidebar {
+        display: flex;
+        flex-direction: column;
+        max-width: 490px;
+        height: 120vh;
+        padding-inline: 30px;
+        background-color: #272933;
+    }
+    .Cars_container_main#carsMain {
+        display: block;
+        padding-block: 50px;
+        width: 68%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    #sidebarBlock.Cars_sidebar {
+        display: flex;
+        flex-direction: column;
+        max-width: 490px;
+        height: 155vh;
+        padding-inline: 30px;
+        margin: 0;
+        background-color: #272933;
+    }
+    .Cars_container_main#carsMain {
+        background-color: hsl(230, 13%, 12%);
+        display: block;
+        padding-block: 50px;
+        width: 68%;
+        margin: 0;
+        height: auto;
     }
 }
