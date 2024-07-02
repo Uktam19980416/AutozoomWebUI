@@ -23,6 +23,7 @@ const CarsCard = () => {
     fetch('https://autoapi.dezinfeksiyatashkent.uz/api/cars')
       .then((res) => res.json())
       .then((data) => {
+        console.log(data?.data);
         setCars(data?.data || []);
       })
       .catch((error) => {
@@ -85,7 +86,7 @@ const CarsCard = () => {
                       <div className='hr' />
                       <div>
                         <span className='model_name'>{car?.model?.name}</span>
-                        <span className='model_name'>{car?.price_in_aed}</span>
+                        <span className='model_name'>{car?.price_in_usd}</span>
                         {car?.price_in_usd && <span className='car-price'>{` / $ ${car?.price_in_usd}`}</span>}
                       </div>
                       <p className='car-title'>prev day</p>

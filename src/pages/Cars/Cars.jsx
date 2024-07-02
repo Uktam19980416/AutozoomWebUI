@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import CarsAll from '../CarsAll/CarsAll'
 
 
-import menuIcon from '../../assets/images/menuIcon.svg'
+import menuIcon from '../../assets/react.svg'
 
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true);
@@ -99,8 +99,8 @@ function Cars() {
           <h4 className="Cars_sidebar_carType_header">Car Type</h4>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_carType_info" key={idx}>
-              <input type="checkbox" id={`carType${item.category_id}`} />
-              <label htmlFor={`carType${item.category_id}`}>
+              <input type="checkbox" id={idx} />
+              <label htmlFor={idx}>
                 {item.category.name_en}
               </label>
             </div>
@@ -110,10 +110,90 @@ function Cars() {
           <div className="Cars_sidebar_brand_header">Brand</div>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
-              <input type="checkbox" id={`brand${item.brand.id}`} />
-              <label htmlFor={`brand${item.brand.id}`}>{item.brand.title}</label>
+              <input type="checkbox" id={idx} />
+              <label htmlFor={idx}>{item.brand.title}</label>
             </div>
           ))}
+          {/* <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand2" />
+            <label htmlFor="brand2">Ford</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand3" />
+            <label htmlFor="brand3">Rolls-Royce</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand4" />
+            <label htmlFor="brand4">Porsche</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand5" />
+            <label htmlFor="brand5">McLaren</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand6" />
+            <label htmlFor="brand6">BMW</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand7" />
+            <label htmlFor="brand7">Cadillac</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand8" />
+            <label htmlFor="brand8">GMC</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand9" />
+            <label htmlFor="brand9">Audi</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand10" />
+            <label htmlFor="brand10">Mercedes Benz</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand11" />
+            <label htmlFor="brand11">Chevrolet</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand12" />
+            <label htmlFor="brand12">Lamborghini</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand13" />
+            <label htmlFor="brand13">Toyota</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand14" />
+            <label htmlFor="brand14">Infiniti</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand15" />
+            <label htmlFor="brand15">Kia</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand16" />
+            <label htmlFor="brand16">Hyundai</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand17" />
+            <label htmlFor="brand17">Dodge</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand18" />
+            <label htmlFor="brand18">Volswagen</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand19" />
+            <label htmlFor="brand19">Jeep</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand20" />
+            <label htmlFor="brand20">Nissan</label>
+          </div>
+          <div className="Cars_sidebar_brand_info">
+            <input type="checkbox" id="brand21" />
+            <label htmlFor="brand21">Mitsubishi</label>
+          </div> */}
         </div>
         <div className="Cars_sidebar_modal">
           <div className="Cars_sidebar_model_info">Model</div>

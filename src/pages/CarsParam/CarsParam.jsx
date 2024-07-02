@@ -9,7 +9,7 @@ import "./CarsParam.css";
 
 // import carImg from "../../assets/images/carsImg1.png";
 
-import { Navigation, Pagination } from "swiper/modules";
+// import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -64,7 +64,7 @@ function CarsParam() {
               </div>
               <Swiper
                 navigation={true}
-                modules={[Navigation, Pagination]}
+                // modules={[Navigation, Pagination]}
                 loop={false}
                 className="mySwiperCars"
               >
