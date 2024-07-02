@@ -89,7 +89,7 @@ function CarsParam() {
               <p className="greyishText-1">Kilometrage limit per day</p>
               <h4>
                 {data?.max_speed} (Every extra km will be charged
-                {data?.transmission} AED/km)
+                <span style={{paddingLeft:"5px"}}>{data?.transmission}</span> AED/km)
               </h4>
               <p className="greyishText-1">Car rental deposit amount</p>
               <h4>The deposit is refunded within {data?.deposit} days</h4>
@@ -452,7 +452,9 @@ function CarsParam() {
           </div>
         </div>
       </div>
+      <div className="container__1">
       <CarsAll getData={getData}/>
+      </div>
     </div>
   );
 }

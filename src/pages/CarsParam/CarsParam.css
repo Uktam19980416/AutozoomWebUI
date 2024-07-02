@@ -3,12 +3,13 @@ html {
   background-color: #1e1f27;
 }
 .container__1 {
+  background-color: hsl(230, 13%, 12%);
   margin: 0 auto;
   height: auto;
   display: flex;
   padding-inline-start: 100px;
   padding-block-start: 30px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 .row {
   padding: 15px;
