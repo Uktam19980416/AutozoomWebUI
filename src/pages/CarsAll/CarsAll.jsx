@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CarsAll.css";
 import './CarsAll_resp.css';
 
-function CarsAll() {
+function CarsAll( {getData} ) {
   const [cars, setCars] = useState([]);
 
   const baseUrl = "https://autoapi.dezinfeksiyatashkent.uz/api";
@@ -35,7 +36,9 @@ function CarsAll() {
                 <Link
                   to={`/carsparams/${car?.id}`}
                   style={{ textDecoration: "none" }}
-                  onClick={() => scrollTo({ top: 0 })}
+                  onClick={() => {
+                    scrollTo({ top: 0 });
+                  }}
                 >
                   <div
                     className="Cars_container_main_car_imgContainer2"

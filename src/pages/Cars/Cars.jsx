@@ -75,8 +75,8 @@ function Cars() {
           <h4 className="Cars_sidebar_carType_header">Car Type</h4>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_carType_info" key={idx}>
-              <input type="checkbox" id={`carType${item.category_id}`} />
-              <label htmlFor={`carType${item.category_id}`}>
+              <input type="checkbox" id={idx} />
+              <label htmlFor={idx}>
                 {item.category.name_en}
               </label>
             </div>
@@ -110,8 +110,8 @@ function Cars() {
           <div className="Cars_sidebar_brand_header">Brand</div>
           {datas.map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
-              <input type="checkbox" id={`brand${item.brand.id}`} />
-              <label htmlFor={`brand${item.brand.id}`}>{item.brand.title}</label>
+              <input type="checkbox" id={idx} />
+              <label htmlFor={idx}>{item.brand.title}</label>
             </div>
           ))}
           {/* <div className="Cars_sidebar_brand_info">
@@ -211,7 +211,7 @@ function Cars() {
       <div className="Cars_container_main">
         <div className="Cars_container_main_header">
           <a href="/" className="Cars_container_main_link">
-            <span>Luxury Cars for Rent in Dubai </span>{' '}
+            <span>Luxury Cars for Rent in Dubai </span>
             <span>/ Hire the latest supercar</span>
           </a>
         </div>

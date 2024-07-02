@@ -5,7 +5,7 @@
   color: white;
   height: auto;
   display: flex;
-  padding-inline-start: 100px;
+  padding-inline-start: 50px;
   padding-block-start: 30px;
   margin-bottom: 100px;
 }
@@ -18,13 +18,17 @@
 }
 .Cars_container_main_car2 {
   height: 475px;
-  width: 275px;
+  width: 300px;
   padding: 5px;
   padding-inline: 15px;
   border-radius: 15px;
   margin: 10px;
   border: 1px solid #ffffff2f;
   background: linear-gradient(338deg,rgba(41,41,41,.266) 31%,hsla(200,1%,59%,.152));
+}
+.Cars_container_main_car2 img {
+  width: 100%;
+  padding-left: 0;
 }
 .Cars_container_main_car_heading2 {
   border-bottom: 1.3px solid #ffffff63;
@@ -34,6 +38,7 @@
   letter-spacing: 2px;
   margin-bottom: 10px;
   padding: 7px;
+  padding-left: 15px;
 }
 .Cars_container_main_car_price_in_aed2 {
   color: #fff;
@@ -41,21 +46,23 @@
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 10px;
+  padding-left: 7px;
 }
 .Cars_container_main_car_price_in_usd2 {
+  padding-left: 7px;
   color: #9e9a9a;
   font-size: 18px;
   font-weight: 300;
 }
 .Cars_container_main_car_info2_buttons2 {
-  margin-left: -15px;
   display: flex;
-  justify-content: space-evenly;
-  padding-inline: 5px;
-  padding-top: 45px;
+  justify-content: space-between;
+  padding-inline: 0;
+  padding-top: 60px;
 }
 .Cars_container_main_car_info2_btn_whatsApp2 button{
   margin-right: 5px;
+  cursor: pointer;
   align-items: center;
   border-radius: 10px;
   color: #fff;
@@ -70,6 +77,7 @@
 .Cars_container_main_car_info2_btn_telegram2 button {
   align-items: center;
   border-radius: 10px;
+  cursor: pointer;
   color: #fff;
   display: flex;
   font-size: 18px;

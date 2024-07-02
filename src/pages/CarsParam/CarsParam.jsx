@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 //CSS Styles
 import "./CarsParam.css";
 
-import carImg from '../../assets/images/carsImg1.png';
+// import carImg from "../../assets/images/carsImg1.png";
 
 import { Navigation, Pagination } from "swiper/modules";
 
@@ -26,7 +26,7 @@ function CarsParam() {
   //CarsAll
   // const [cars, setCars] = useState([]);
 
-//CarsParam
+  //CarsParam
   const baseUrl = "https://autoapi.dezinfeksiyatashkent.uz/api";
   const baseImgUrl =
     "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
@@ -40,20 +40,9 @@ function CarsParam() {
       });
   };
 
- /*  const getCars = () => {
-    fetch(`${baseUrl}/cars`)
-      .then((resp) => resp.json())
-      .then((info) => {
-        setCars(info?.data);
-        console.log(info?.data);
-      })
-      .catch((err) => console.error(err))} */
-
-
   useEffect(() => {
     getData();
-    // getCars();
-  }, []);
+  }, [id]);
 
   return (
     <div>
@@ -138,7 +127,15 @@ function CarsParam() {
               </h6>
             </div>
           </div>
-          <hr style={{background:"white", display:"inline-block", height:"3px", width:"100%", marginBottom: "10px"}}/>
+          <hr
+            style={{
+              background: "white",
+              display: "inline-block",
+              height: "3px",
+              width: "100%",
+              marginBottom: "10px",
+            }}
+          />
           <div className="row_flex">
             <div className="row_1 row_flexed">
               <div className="col-lg-2">
@@ -241,7 +238,6 @@ function CarsParam() {
                 </div>
               </div>
             </div>
-            <hr style={{background:"white", display:"inline-block", height:"3px", width:"100%"}}/>
             <div className="row_1 row_flexed">
               <div className="col-lg-2">
                 <div>
@@ -360,6 +356,14 @@ function CarsParam() {
               </div>
             </div>
           </div>
+          <hr
+            style={{
+              background: "white",
+              display: "inline-block",
+              height: "3px",
+              width: "100%",
+            }}
+          />
           <div className="row_1">
             <div className="col-lg-6_2">
               <a
@@ -448,7 +452,7 @@ function CarsParam() {
           </div>
         </div>
       </div>
-      <CarsAll/>
+      <CarsAll getData={getData}/>
     </div>
   );
 }
