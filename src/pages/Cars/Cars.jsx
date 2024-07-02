@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
-import './Cars.css'
+import "./Cars.css";
+import './Cars_resp.css';
 
 //Car Image
 import carImg from '../../assets/images/carsImg1.png'
