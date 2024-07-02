@@ -24,8 +24,6 @@ function Cars() {
     return await response.json()
   }
 
-<<<<<<< HEAD
-=======
   const handleMenuChange = () => {
   const sidebarBlock = document.getElementById("sidebarBlock");
   const carsMainBlock = document.getElementById("carsMain");
@@ -42,7 +40,6 @@ function Cars() {
   setMenuOpen(!menuOpen);
   }
 
->>>>>>> origin/Quvomiddin
   useEffect(() => {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatas(data?.data)
