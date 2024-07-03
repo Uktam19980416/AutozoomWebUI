@@ -9,8 +9,10 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import './CarsCard.css';
 import { Link, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const CarsCard = () => {
+  const {t} = useTranslation()
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -48,7 +50,7 @@ const CarsCard = () => {
           <div key={index}>
             <div className='add-top'>
               <h1 className='add-title'>{category}</h1>
-              <Link to={`/cars/${groupedCars[category][0]?.id}`} className='add-sublink'>
+              <Link onClick={() =>  window.scrollTo({ top: 0 }) } to={`/cars/${groupedCars[category][0]?.id}`} className='add-sublink'>
                 SEE ALL <i className="left-icon fa-solid fa-chevron-right"></i>
               </Link>
             </div>
@@ -89,7 +91,7 @@ const CarsCard = () => {
                         <span className='model_name'>{car?.price_in_usd}</span>
                         {car?.price_in_usd && <span className='car-price'>{` / $ ${car?.price_in_usd}`}</span>}
                       </div>
-                      <p className='car-title'>prev day</p>
+                      <p className='car-title'>{t("carsCard")}</p>
                     </div>
                   </Link>
                 </SwiperSlide>

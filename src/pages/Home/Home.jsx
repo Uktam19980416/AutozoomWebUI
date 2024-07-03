@@ -8,8 +8,10 @@ import Service from '../../pages/Service/Service';
 import './Home.css';
 import Youtube from '../../components/YoutubeContent/Youtube';
 import Rental from '../../components/Rental/Rental';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const {t} = useTranslation()
   const [categories, setCategories] = useState([]);
   const [locations, setLocations] = useState([]);
   const [cities, setCities] = useState([]);
@@ -65,7 +67,7 @@ function Home() {
 
       <div className="home-car">
         <div className="container">
-          <h1 className='home-title'>ПОДПИСЫВАЙТЕСЬ НА НАС В ИНСТАГРАМ</h1>
+          <h1 className='home-title'>{t("faq13")}</h1>
           <div className="categories-car">
             {categories.map((category) => (
               <div key={category.id} className="category-car" onClick={() => setSelectedImage(`${UrlImg}${category.image_src}`)}>
@@ -75,14 +77,14 @@ function Home() {
           </div>
           <div className="home-locations">
             <div className="home-local-1">
-              <h1>LOCATION</h1>
+              <h1>{t("faq14")}</h1>
               {locations.map((location) => (
                 <div key={location.id}>
                   <a className='home-link' href={`/locations/${location.id}`}>{location.name}</a>
                 </div>
               ))}
             </div>
-            <div className="home-local-2"><h1>CITY</h1>
+            <div className="home-local-2"><h1>{t("faq15")}</h1>
               {cities.map((city) => (
                 <div key={city.id}>
                   <a className='home-link' href={`/cities/${city.id}`}>{city.name}</a>
