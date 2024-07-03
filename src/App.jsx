@@ -24,8 +24,17 @@ import blogInfoImg1 from "../src/assets/images/blogImg1.jpg";
 import blogInfoImg2 from "../src/assets/images/blogImg2.jpg";
 import blogInfoImg3 from "../src/assets/images/blogImg3.jpg";
 import CarsAll from "./pages/CarsAll/CarsAll";
+import { SearchContextProvider } from "./context/SearchContext";
 
 function App() {
+  return (
+    <SearchContextProvider>
+      <AppContent />
+    </SearchContextProvider>
+  );
+}
+
+function AppContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
