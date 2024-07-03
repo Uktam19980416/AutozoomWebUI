@@ -32,29 +32,29 @@ const Brands = () => {
         <div className="Brands-Swipper-flex">
           <Swiper
             slidesPerView={4}
-            grid={{ rows: 2 }}
-            spaceBetween={0}
+            grid={{ rows: 2, fill: 'row' }} // fill: 'row' qo'shildi
+            spaceBetween={10}
             pagination={{ clickable: true }}
             breakpoints={{
               300: {
                 slidesPerView: 1,
-                grid: { rows: 1 },
+                grid: { rows: 1, fill: 'row' }, // fill: 'row' qo'shildi
               },
               500: {
                 slidesPerView: 2,
-                grid: { rows: 2 },
+                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
               },
               700: {
                 slidesPerView: 3,
-                grid: { rows: 2 },
+                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
               },
               900: {
                 slidesPerView: 3,
-                grid: { rows: 2 },
+                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
               },
               1200: {
                 slidesPerView: 4,
-                grid: { rows: 2 },
+                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
               },
             }}
             modules={[Grid, Pagination]}
