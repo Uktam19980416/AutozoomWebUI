@@ -5,7 +5,7 @@ const SearchContext = createContext(undefined)
 function SearchContextProvider({children}) {
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api';
   const base_URL2 = 'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/';
-  const [datas, setDatas] = useState([]);
+  const [datasCar, setDatasCar] = useState([]);
 
   const getFetch = async (url) => {
     const response = await fetch(url, { method: 'GET' });
@@ -14,13 +14,13 @@ function SearchContextProvider({children}) {
 
   useEffect(() => {
     getFetch(`${base_URL}/cars`).then((data) => {
-      setDatas(data?.data);
+      setDatasCar(data?.data);
       console.log(data?.data)
     });
   }, []);
 
   const value = {
-    datas,
+    datasCar,
     base_URL,
     base_URL2
   }

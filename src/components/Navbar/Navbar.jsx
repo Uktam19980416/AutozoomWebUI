@@ -9,7 +9,7 @@ import logo from '../../assets/images/logo.svg'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useContext } from 'react'
+import { useSearchContext } from '../../context/SearchContext'
 
 function Navbar() {
   const { t, i18n } = useTranslation()
@@ -28,10 +28,9 @@ function Navbar() {
 
   //
   const [navbarBlock, setNavbarBlock] = useState(false);
-  // const 
+  const {datasCar} = useSearchContext()
 
-
-
+  console.log(datasCar)
 
   const getFetch = async (url) => {
     const response = await fetch(url, {
