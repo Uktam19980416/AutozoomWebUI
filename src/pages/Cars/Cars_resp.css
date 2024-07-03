@@ -16,7 +16,8 @@
     .Cars_container_main#carsMain {
         display: block;
         padding-block: 50px;
-        width: 68%;
+        background-color: hsl(230, 13%, 12%);
+        width: 100%;
         margin: 0 auto;
         height: auto;
     }
@@ -48,8 +49,9 @@
     }
     .Cars_container_main#carsMain {
         display: block;
+        background-color: hsl(230, 13%, 12%);
         padding-block: 50px;
-        width: 68%;
+        width: 100%;
         margin: 0 auto;
         height: auto;
       }
@@ -76,7 +78,8 @@
     .Cars_container_main#carsMain {
         display: block;
         padding-block: 50px;
-        width: 68%;
+        background-color: hsl(230, 13%, 12%);
+        width: 100%;
         margin: 0 auto;
         height: auto;
     }
@@ -102,8 +105,9 @@
     }
     .Cars_container_main#carsMain {
         display: block;
+        background-color: hsl(230, 13%, 12%);
         padding-block: 50px;
-        width: 68%;
+        width: 100%;
         height: auto;
     }
     .Cars_sidebar_buttons {
@@ -125,8 +129,9 @@
     }
     .Cars_container_main#carsMain {
         display: block;
+        background-color: hsl(230, 13%, 12%);
         padding-block: 50px;
-        width: 68%;
+        width: 100%;
         margin: 0 auto;
         height: auto;
     }

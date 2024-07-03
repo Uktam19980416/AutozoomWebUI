@@ -1,6 +1,6 @@
 .slider__container {
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 .slider__title {
