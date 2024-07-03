@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import styles from './Navbar.module.css'
 import en from '../../assets/images/en.png'
+import closeSvg from '../../assets/close.svg'
 import ru from '../../assets/images/ru.png'
 import { CiSearch } from 'react-icons/ci'
 import { FaBarsStaggered } from 'react-icons/fa6'
@@ -22,6 +24,13 @@ function Navbar() {
   const [datas, setDatas] = useState([])
   const [isBrandHover, setIsBrandHover] = useState(false)
 
+
+  //
+  const [navbarBlock, setNavbarBlock] = useState(false);
+
+
+
+
   const getFetch = async (url) => {
     const response = await fetch(url, {
       method: 'GET',
@@ -37,7 +46,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="nav">
+      <div className="nav" id="nav">
         <div className={styles.container}>
           <div className={styles.nav__head}>
             <div className={styles.nav__left}>
@@ -171,8 +180,10 @@ function Navbar() {
         </div>
       </div>
       <input type="checkbox" id="menu-toggle" className={styles.menu_toggle} />
-
-      <div className={styles.navbar__right_bar}>
+      <div className={styles.navbar__right_bar} id="mobileBlock">
+                  <label htmlFor="menu-toggle">
+                  <img src={closeSvg} className={styles.closeSvgImg} alt="" id="closeImg"/>
+                  </label>
         <ul className={styles.nav__right__ul_mobile}>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/cars">
