@@ -59,7 +59,7 @@ function Services() {
               {t("servicesCard5")}
             </h4>
             <p className="services_sub_main_text">
-              {t("serviceCard6")}
+              {t("servicesCard6")}
             </p>
             <div className="servicesLink">
               <Link
