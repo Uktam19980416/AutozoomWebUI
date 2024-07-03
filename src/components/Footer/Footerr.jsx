@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
 import './Footer.css';
 import Logo from '../../assets/images/logo.svg';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
   const [categories, setCategories] = useState([]);
@@ -17,7 +18,7 @@ function Footer() {
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
-
+   const {t}  = useTranslation()
   return (
     <footer className="footer">
       <div className="container">
@@ -27,15 +28,15 @@ function Footer() {
               <img width={100} src={Logo} alt="Logo" />
             </Link>
             <h1 className="footer_title">
-              LUXURY CAR RENTAL IN DUBAI
+              {t("footer1")}
             </h1>
             <p className="footer_text1">
-              Rent sports and luxury cars directly without intermediaries. Rent a car in Dubai with Auto Zoom Car Rental - safety and driving pleasure
+            {t("footer2")}
             </p>
           </div>
 
           <div className="footer_part1">
-            <h3 className="footer_cars">CARS</h3>
+            <h3 className="footer_cars">   {t("footer3")}</h3>
             {categories.map((category) => (
               <div key={category.id} className="category">
                 <p className="text"><Link to={`/category/${category.id}`} className="Link">{category.name_en}</Link></p>
@@ -44,27 +45,27 @@ function Footer() {
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_blog"><Link to="/blog" className="Link">BLOG</Link></h3>
-            <h3 className="footer_service"><Link to="/service" className="Link">SERVICE</Link></h3>
+            <h3 className="footer_blog"><Link to="/blog" className="Link">   {t("footer4")}</Link></h3>
+            <h3 className="footer_service"><Link to="/service" className="Link">   {t("footer5")}</Link></h3>
             <div>
-              <h3 className="footer_contact"><Link to="/contacts" className="Link">CONTACTS</Link></h3>
+              <h3 className="footer_contact"><Link to="/contacts" className="Link">   {t("footer6")}</Link></h3>
               <p className="footer_text">
-                Elite 3 Sports City, Dubai 26W8 24J, United Arab Emirates
+              {t("footer7")}
               </p>
               <p className="footer_text">
                 +971 55 8462124
               </p>
               <p className="footer_text">
-                Working hours: 24/7
+              {t("footer8")}
               </p>
             </div>
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_about"><Link to="/about-us" className="Link">ABOUT US</Link></h3>
-            <p className="footer_text2"><Link to="/our-team" className="Link">Our Team</Link></p>
-            <p className="footer_text2"><Link to="/faq" className="Link">FAQ</Link></p>
-            <h3 className="footer_follow">Follow Us</h3>
+            <h3 className="footer_about"><Link to="/about-us" className="Link">   {t("footer9")}</Link></h3>
+            <p className="footer_text2"><Link to="/our-team" className="Link">   {t("footer10")}</Link></p>
+            <p className="footer_text2"><Link to="/faq" className="Link">   {t("footer11")}</Link></p>
+            <h3 className="footer_follow">   {t("footer12")}</h3>
             <div className="follow_icon">
               <Link to="https://www.instagram.com/autozoomrental" target="_blank" className="Link"><FaInstagram size={25} /></Link>
               <Link to="https://www.facebook.com/autozoomrental" target="_blank" className="Link"><FaFacebook size={25} /></Link>
@@ -76,15 +77,15 @@ function Footer() {
         <div className="footer_bottom">
           <div className="footer_btn">
             <button className="footer_button">
-              <a href="tel:+998938386767" className="Link">GET BEST OFFER</a>
+              <a href="tel:+998938386767" className="Link">   {t("footer13")}</a>
             </button>
           </div>
 
           <div className="footer_line">
             <hr />
             <div className="line_box">
-              <p>© 2024 Auto Zoom Car Rental.<br />United Arab Emirates.</p>
-              <p><Link to="/terms-and-conditions" className="Link">Terms and Conditions</Link></p>
+              <p>   {t("footer14")}<br />   {t("footer15")}.</p>
+              <p><Link to="/terms-and-conditions" className="Link">   {t("footer16")}</Link></p>
             </div>
           </div>
         </div>

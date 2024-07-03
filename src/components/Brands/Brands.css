@@ -1,8 +1,6 @@
-/* .BrandWrapper{
-  padding: 30px 0;
-  width: 100%;
-  background-color: #1E1F27;
-} */
+.BrandWrapper{
+background: #1E1F27 !important;
+}
 
 .container {
   margin: 0 auto;
@@ -22,12 +20,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 25px;
-  border: 1px solid #fff;
-  height: 100%;
+  flex-direction: column;
+  width: 200px;
+  height: 170px;
+  background: #111219 !important;
+  transition: all 0.5s ease;
+  border-radius: 5px;
 }
-
+.brand__images:hover{
+  background: linear-gradient(161.55deg, hsla(0, 0%, 100%, .294) -9.06%, #11121997 39.4%, #111219) !important;
+}
 .brand__text {
   font-size: 1.2rem;
   font-weight: 700;
@@ -45,25 +47,25 @@
   height: 450px !important;
 }
 
-.box {
+/* .box {
   width: 100px;
   height: 100px;
   background-color: white !important;
-}
+} */
 
-.swiper__slider {
+/* .swiper__slider {
   margin-top: 0 !important;
-}
+} */
 
-.swiper-slidebrand {
+/* .swiper-slidebrand {
   text-align: center;
   font-size: 18px;
   color: white;
   gap: 5px;
   display: flex;
   box-shadow: 0px 0px 2px 1px #4d4c4c;
-}
-.swiper-slidebrand::after {
+} */
+/* .swiper-slidebrand::after {
   z-index: -1;
   content: '';
   position: absolute;
@@ -74,8 +76,8 @@
   background: linear-gradient(45deg, #1e1f27, #1e1f27, #111219, #111219);
   background-size: 300%;
   animation: shadow 5s linear infinite;
-}
-.swiper-slidebrand:hover {
+} */
+/* .swiper-slidebrand:hover {
   background: linear-gradient(
     161.55deg,
     hsla(0, 0%, 100%, 0.294) -9.06%,
@@ -96,4 +98,4 @@
   100% {
     background-position: 0 0;
   }
-}
+} */
