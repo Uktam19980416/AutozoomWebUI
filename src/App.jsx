@@ -62,7 +62,6 @@ function AppContent() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/Faq" element={<Faq />} />
         <Route path="/terms_and_conditions" element={<Terms />} />
-        {/* <Route path="/services" element={<CarsParam />} /> */}
         <Route path="/services" element={<Services />} />
         <Route path="/services/sport_car_rent" element={<Add />} />
         <Route
