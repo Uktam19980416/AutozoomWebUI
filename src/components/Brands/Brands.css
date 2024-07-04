@@ -27,7 +27,7 @@ background: #1E1F27 !important;
   transition: all 0.5s ease;
   border-radius: 5px;
 }
-.brand__images:hover{
+.brand__images:hover {
   background: linear-gradient(161.55deg, hsla(0, 0%, 100%, .294) -9.06%, #11121997 39.4%, #111219) !important;
 }
 .brand__text {

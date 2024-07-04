@@ -7,6 +7,7 @@ import Info from '../../components/InfoHome/Info'
 import Service from '../../pages/Service/Service';
 import './Home.css';
 import Youtube from '../../components/YoutubeContent/Youtube';
+import Rental from '../../components/Rental/Rental';
 import { useTranslation } from 'react-i18next';
 
 function Home() {
@@ -59,6 +60,7 @@ function Home() {
       <Service />
       <Info />
       <Youtube />
+      <Rental />
       <Faq/>
 
 

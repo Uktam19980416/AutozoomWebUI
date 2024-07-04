@@ -45,6 +45,8 @@ function Footer() {
           </div>
 
           <div className="footer_part">
+            <h3 className="footer_blog"><Link to="/blog" className="Link">BLOG</Link></h3>
+            <h3 className="footer_service"><Link to="/services" className="Link">SERVICE</Link></h3>
             <h3 className="footer_blog"><Link to="/blog" className="Link">   {t("footer4")}</Link></h3>
             <h3 className="footer_service"><Link to="/service" className="Link">   {t("footer5")}</Link></h3>
             <div>

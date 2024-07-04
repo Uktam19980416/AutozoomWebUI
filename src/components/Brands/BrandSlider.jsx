@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/grid';
 import 'swiper/css/pagination';
@@ -32,29 +31,29 @@ const Brands = () => {
         <div className="Brands-Swipper-flex">
           <Swiper
             slidesPerView={4}
-            grid={{ rows: 2, fill: 'row' }} // fill: 'row' qo'shildi
+            grid={{ rows: 2, fill: 'row' }}
             spaceBetween={10}
             pagination={{ clickable: true }}
             breakpoints={{
               300: {
                 slidesPerView: 1,
-                grid: { rows: 1, fill: 'row' }, // fill: 'row' qo'shildi
+                grid: { rows: 1, fill: 'row' },
               },
               500: {
                 slidesPerView: 2,
-                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
+                grid: { rows: 2, fill: 'row' },
               },
               700: {
                 slidesPerView: 3,
-                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
+                grid: { rows: 2, fill: 'row' },
               },
               900: {
                 slidesPerView: 3,
-                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
+                grid: { rows: 2, fill: 'row' },
               },
               1200: {
                 slidesPerView: 4,
-                grid: { rows: 2, fill: 'row' }, // fill: 'row' qo'shildi
+                grid: { rows: 2, fill: 'row' },
               },
             }}
             modules={[Grid, Pagination]}
@@ -62,7 +61,9 @@ const Brands = () => {
           >
             {datas.map((item) => (
               <SwiperSlide key={item.id} className="swiper-slidebrand">
-                <Link to={`/cars/${item.id}`} className="brand__images">
+                <Link to={`/cars/${item.id}`} className="brand__images" onClick={() =>
+                  window.scrollTo({ top: 0 })
+              }>
                   <img
                     src={`${base_URL2}${item.image_src}`}
                     alt={item.title}

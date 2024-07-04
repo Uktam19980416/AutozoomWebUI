@@ -1,67 +1,68 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./CarsAll.css";
-import './CarsAll_resp.css';
+import { useEffect, useState } from 'react'
+import { useSearchContext } from '../../context/SearchContext'
+import './CarsAll.css'
+import { Link } from 'react-router-dom'
 
-function CarsAll( {getData} ) {
-  const [cars, setCars] = useState([]);
-
-  const baseUrl = "https://autoapi.dezinfeksiyatashkent.uz/api";
+const CarsAll = () => {
+  const { datasCar, searchCar } = useSearchContext()
+  console.log(searchCar)
+  const [filteredCars, setFilteredCars] = useState([])
   const baseImgUrl =
-    "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
-
-  const getCars = () => {
-    fetch(`${baseUrl}/cars`)
-      .then((resp) => resp.json())
-      .then((info) => {
-        setCars(info?.data);
-        console.log(info?.data);
-      })
-      .catch((err) => console.error(err));
-  };
+    'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/'
 
   useEffect(() => {
-    getCars();
-  }, []);
+    setFilteredCars(
+      datasCar.filter((car) =>
+        car.brand.title.toLowerCase().includes(searchCar.toLowerCase())
+      )
+    )
+  }, [datasCar, searchCar])
 
   return (
-    <div>
+    <div className="cars-all">
+      <h1>All Cars</h1>
+      {/* <div className="cars-list">
+        {filteredCars.length > 0 ? (
+          filteredCars.map((car) => (
+            <div key={car.id} className="car-item">
+              <h2>{car.title}</h2>
+              <p>{car.description}</p>
+            </div>
+          ))
+        ) : (
+          <p>No cars found</p>
+        )}
+      </div> */}
       <div className="carsAll_container__">
         <div className="Cars_container_main_cars2">
-          {cars &&
-            cars?.map((car, index) => (
+          {filteredCars.length > 0 ? (
+            filteredCars.map((car, index) => (
               <div className="Cars_container_main_car2" key={index}>
                 <Link
-                  to={`/carsparams/${car?.id}`}
-                  style={{ textDecoration: "none" }}
+                  to={`/carsparams/${car.id}`}
+                  style={{ textDecoration: 'none' }}
                   onClick={() => {
-                    scrollTo({ top: 0 });
+                    scrollTo({ top: 0 })
                   }}
                 >
-                  <div
-                    className="Cars_container_main_car_imgContainer2"
-                    key={index}
-                  >
+                  <div className="Cars_container_main_car_imgContainer2">
                     <img
-                      src={`${baseImgUrl}/${car?.car_images[0]?.image?.src}`}
+                      src={`${baseImgUrl}/${car.car_images[0]?.image?.src}`}
                       alt=""
                       width={200}
                       height={200}
                     />
                   </div>
-
                   <div className="Cars_container_main_car_info2">
                     <h5 className="Cars_container_main_car_heading2">
-                      {`${car?.brand?.title} ${car?.model?.name}`}
+                      {`${car.brand.title} ${car.model.name}`}
                     </h5>
                     <p>
                       <span className="Cars_container_main_car_price_in_aed2">
-                        AED {car?.price_in_aed}
+                        AED {car.price_in_aed}
                       </span>
                       <span className="Cars_container_main_car_price_in_usd2">
-                        / $ {car?.price_in_usd}
+                        / $ {car.price_in_usd}
                       </span>
                     </p>
                     <p className="Cars_container_main_car_price_in_usd2">
@@ -86,11 +87,15 @@ function CarsAll( {getData} ) {
                   </Link>
                 </div>
               </div>
-            ))}
+            ))
+          ) : (
+            <p>No cars found</p>
+          )}
         </div>
       </div>
+      
     </div>
-  );
+  )
 }
 
-export default CarsAll;
+export default CarsAll

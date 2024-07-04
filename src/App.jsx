@@ -7,6 +7,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import Blog from "./pages/Blog/Blog";
 // import CarsParam from './pages/CarsParam/CarsParam';
 //import Service from './pages/Service/Service';
+
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footerr";
 import Loader from "./components/Loader/Loader";
@@ -15,14 +16,25 @@ import Services from "./pages/Service/Service";
 import Add from "./components/Add/Add";
 import Add2 from "./components/Add2/Add2";
 import BlogInfo from "./components/BlogInfo/BlogInfo";
+import Faq from './components/Faq/faq';
+import Terms from './pages/Terms/terms';
 
 //BlogInfo Images Imported
 import blogInfoImg1 from "../src/assets/images/blogImg1.jpg";
 import blogInfoImg2 from "../src/assets/images/blogImg2.jpg";
 import blogInfoImg3 from "../src/assets/images/blogImg3.jpg";
 import CarsAll from "./pages/CarsAll/CarsAll";
+import { SearchContextProvider } from "./context/SearchContext";
 
 function App() {
+  return (
+    <SearchContextProvider>
+      <AppContent />
+    </SearchContextProvider>
+  );
+}
+
+function AppContent() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -43,11 +55,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/cars" element={<Cars />} />
+        <Route path="/cars/:brandId" element={<Cars />} />
+        {/* <Route path="/cars" element={<Cars />} /> */}
         <Route path="/carsparams/:id" element={<CarsParam />} />
         <Route path="/carsparams/:id" element={<CarsAll/>}/>
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/Faq" element={<Faq />} />
+        <Route path="/terms" element={<Terms />} />
         {/* <Route path="/services" element={<CarsParam />} /> */}
         <Route path="/services" element={<Services />} />
         <Route path="/services/sport_car_rent" element={<Add />} />
