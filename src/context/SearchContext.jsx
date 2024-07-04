@@ -1,11 +1,22 @@
-import {createContext, useContext, useState, useEffect} from 'react'
+import { createContext, useContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const SearchContext = createContext(undefined)
+const SearchContext = createContext(undefined);
 
-function SearchContextProvider({children}) {
+function SearchContextProvider({ children }) {
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api';
-  const base_URL2 = 'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/';
   const [datasCar, setDatasCar] = useState([]);
+  const [searchCar, setSearchCar] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearchCar = (e) => {
+    if (e.key === 'Enter') {
+      navigate('/cars'); // Navigate to the CarsAll component when Enter is pressed
+      console.log('Enter');
+    } else {
+      setSearchCar(e.target.value);
+    }
+  };
 
   const getFetch = async (url) => {
     const response = await fetch(url, { method: 'GET' });
@@ -15,29 +26,29 @@ function SearchContextProvider({children}) {
   useEffect(() => {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatasCar(data?.data);
-      console.log(data?.data)
+      console.log(data?.data);
     });
   }, []);
 
   const value = {
     datasCar,
-    base_URL,
-    base_URL2
-  }
+    searchCar,
+    handleSearchCar,
+  };
 
   return (
     <SearchContext.Provider value={value}>
       {children}
     </SearchContext.Provider>
-  )
+  );
 }
 
 const useSearchContext = () => {
-  const context = useContext(SearchContext)
+  const context = useContext(SearchContext);
   if (context === undefined) {
-    throw new Error('useSearchContext must be used within a MyContextProvider')
+    throw new Error('useSearchContext must be used within a SearchContextProvider');
   }
-  return context
-}
+  return context;
+};
 
-export {SearchContextProvider, useSearchContext}
+export { SearchContextProvider, useSearchContext };

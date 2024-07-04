@@ -28,9 +28,10 @@ function Navbar() {
 
   //
   const [navbarBlock, setNavbarBlock] = useState(false);
-  const {datasCar} = useSearchContext()
+  // const {datasCar, searchCar, handleSearchCar} = useSearchContext()
+  const { searchCar, handleSearchCar } = useSearchContext();
 
-  console.log(datasCar)
+  // console.log(datasCar, searchCar)
 
   const getFetch = async (url) => {
     const response = await fetch(url, {
@@ -73,6 +74,9 @@ function Navbar() {
                   className={styles.nav__search__input}
                   type="text"
                   placeholder="Search..."
+                  value={searchCar}
+                  onChange={handleSearchCar}
+                  onKeyDown={handleSearchCar}
                 />
               </div>
               <div>
