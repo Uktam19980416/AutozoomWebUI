@@ -17,7 +17,7 @@ function Services() {
     <div className="Services">
       <div className="services_head">
         <Link to={"/"} className="services_head_link">
-          <span>{t("serviceCard1")}</span> <span>/ {t("service")}</span>
+          <span>{t("servicesCard1")}</span> <span>/ {t("service")}</span>
         </Link>
         <h1 className="services_header">{t("service")}</h1>
       </div>
@@ -26,7 +26,7 @@ function Services() {
           <img src={service1} className="serviceImg" alt="" />
           <div className="services_sub_main_space">
             <h4 className="services_sub_main_info">
-           {t("serviceCard2")}
+           {t("servicesCard2")}
             </h4>
             <p className="services_sub_main_text">
             {t("servicesCard3")}
