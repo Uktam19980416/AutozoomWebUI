@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./CarsAll.css";
 import './CarsAll_resp.css';
+import { useTranslation } from "react-i18next";
 
 function CarsAll( {getData} ) {
+  const { t, i18n } = useTranslation();
   const [cars, setCars] = useState([]);
 
   const baseUrl = "https://autoapi.dezinfeksiyatashkent.uz/api";
-  const baseImgUrl =
-    "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
+  const baseImgUrl = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
 
   const getCars = () => {
     fetch(`${baseUrl}/cars`)
@@ -37,13 +38,10 @@ function CarsAll( {getData} ) {
                   to={`/carsparams/${car?.id}`}
                   style={{ textDecoration: "none" }}
                   onClick={() => {
-                    scrollTo({ top: 0 });
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
-                  <div
-                    className="Cars_container_main_car_imgContainer2"
-                    key={index}
-                  >
+                  <div className="Cars_container_main_car_imgContainer2" key={index}>
                     <img
                       src={`${baseImgUrl}/${car?.car_images[0]?.image?.src}`}
                       alt=""
@@ -65,7 +63,7 @@ function CarsAll( {getData} ) {
                       </span>
                     </p>
                     <p className="Cars_container_main_car_price_in_usd2">
-                      per day
+                      {t("per_day")}
                     </p>
                   </div>
                 </Link>
@@ -73,14 +71,14 @@ function CarsAll( {getData} ) {
                   <Link to={`/cars`}>
                     <div className="Cars_container_main_car_info2_btn_whatsApp2">
                       <button>
-                        <i className="fa-brands fa-whatsapp"></i> WhatsApp
+                        <i className="fa-brands fa-whatsapp"></i> {t("WhatsApp")}
                       </button>
                     </div>
                   </Link>
                   <Link to={`/cars`}>
                     <div className="Cars_container_main_car_info2_btn_telegram2">
                       <button>
-                        <i className="fa-brands fa-telegram"></i> Telegram
+                        <i className="fa-brands fa-telegram"></i> {t("Telegram")}
                       </button>
                     </div>
                   </Link>
