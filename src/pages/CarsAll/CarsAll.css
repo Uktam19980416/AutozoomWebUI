@@ -9,6 +9,9 @@
   padding-block-start: 30px;
   margin-bottom: 100px;
 }
+.cars-all-header {
+  padding-left: 30px;
+}
 .Cars_container_main_cars2 {
   display: flex;
   flex-direction: row;

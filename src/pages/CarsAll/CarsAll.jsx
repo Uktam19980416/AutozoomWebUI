@@ -20,7 +20,7 @@ const CarsAll = () => {
 
   return (
     <div className="cars-all">
-      <h1>All Cars</h1>
+      <h1 className='cars-all-header'>All Cars</h1>
       {/* <div className="cars-list">
         {filteredCars.length > 0 ? (
           filteredCars.map((car) => (
