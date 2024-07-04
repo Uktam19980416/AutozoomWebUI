@@ -18,13 +18,13 @@ function Cars() {
   const getFetch = async (url) => {
     const response = await fetch(url, {
       method: 'GET',
-    });
-    return await response.json();
-  };
+    })
+    return await response.json()
+  }
 
   const handleMenuChange = () => {
-    const sidebarBlock = document.getElementById('sidebarBlock');
-    const carsMainBlock = document.getElementById('carsMain');
+    const sidebarBlock = document.getElementById('sidebarBlock')
+    const carsMainBlock = document.getElementById('carsMain')
     if (menuOpen) {
       sidebarBlock.classList.add('carsSidebarBlock')
       carsMainBlock.classList.add('carsMainBlock')
@@ -174,7 +174,7 @@ function Cars() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Cars;
+export default Cars
