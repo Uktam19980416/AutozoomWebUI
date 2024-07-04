@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
 import './Footer.css';
@@ -24,7 +24,7 @@ function Footer() {
       <div className="container">
         <div className="footer_box">
           <div className="footer_part">
-            <Link to="/" className="Link">
+            <Link to="/" className="Link"  onClick={scrollTo({top:0})}>
               <img width={100} src={Logo} alt="Logo" />
             </Link>
             <h1 className="footer_title">
@@ -39,18 +39,18 @@ function Footer() {
             <h3 className="footer_cars">   {t("footer3")}</h3>
             {categories.map((category) => (
               <div key={category.id} className="category">
-                <p className="text"><Link to={`/category/${category.id}`} className="Link">{category.name_en}</Link></p>
+                <p className="text"><Link to={`/category/${category.id}`}  onClick={scrollTo({top:0})} className="Link">{category.name_en}</Link></p>
               </div>
             ))}
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_blog"><Link to="/blog" className="Link">BLOG</Link></h3>
-            <h3 className="footer_service"><Link to="/services" className="Link">SERVICE</Link></h3>
-            <h3 className="footer_blog"><Link to="/blog" className="Link">   {t("footer4")}</Link></h3>
-            <h3 className="footer_service"><Link to="/service" className="Link">   {t("footer5")}</Link></h3>
+            <h3 className="footer_blog"><Link  onClick={scrollTo({top:0})} to="/blog" className="Link">BLOG</Link></h3>
+            <h3 className="footer_service"><Link  onClick={scrollTo({top:0})} to="/services" className="Link">SERVICE</Link></h3>
+            <h3 className="footer_blog"><Link  onClick={scrollTo({top:0})} to="/blog" className="Link">   {t("footer4")}</Link></h3>
+            <h3 className="footer_service"><Link  onClick={scrollTo({top:0})} to="/service" className="Link">   {t("footer5")}</Link></h3>
             <div>
-              <h3 className="footer_contact"><Link to="/contacts" className="Link">   {t("footer6")}</Link></h3>
+              <h3 className="footer_contact"><Link to="/contacts"  onClick={scrollTo({top:0})} className="Link">   {t("footer6")}</Link></h3>
               <p className="footer_text">
               {t("footer7")}
               </p>
@@ -64,14 +64,14 @@ function Footer() {
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_about"><Link to="/about-us" className="Link">   {t("footer9")}</Link></h3>
-            <p className="footer_text2"><Link to="/our-team" className="Link">   {t("footer10")}</Link></p>
-            <p className="footer_text2"><Link to="/faq" className="Link">   {t("footer11")}</Link></p>
+            <h3 className="footer_about"><Link to="/about-us" className="Link"  onClick={scrollTo({top:0})}>   {t("footer9")}</Link></h3>
+            <p className="footer_text2"><Link to="/our-team" className="Link"  onClick={scrollTo({top:0})}>  {t("footer10")}</Link></p>
+            <p className="footer_text2"><Link to="/faq" className="Link"  onClick={scrollTo({top:0})}>  {t("footer11")}</Link></p>
             <h3 className="footer_follow">   {t("footer12")}</h3>
             <div className="follow_icon">
-              <Link to="https://www.instagram.com/autozoomrental" target="_blank" className="Link"><FaInstagram size={25} /></Link>
-              <Link to="https://www.facebook.com/autozoomrental" target="_blank" className="Link"><FaFacebook size={25} /></Link>
-              <Link to="https://www.youtube.com/autozoomrental" target="_blank" className="Link"><FaYoutube size={25} /></Link>
+              <Link to="https://www.instagram.com/autozoomrental"  onClick={scrollTo({top:0})} target="_blank" className="Link"><FaInstagram size={25} /></Link>
+              <Link to="https://www.facebook.com/autozoomrental"  onClick={scrollTo({top:0})} target="_blank" className="Link"><FaFacebook size={25} /></Link>
+              <Link to="https://www.youtube.com/autozoomrental"  onClick={scrollTo({top:0})} target="_blank" className="Link"><FaYoutube size={25} /></Link>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ function Footer() {
         <div className="footer_bottom">
           <div className="footer_btn">
             <button className="footer_button">
-              <a href="tel:+998938386767" className="Link">   {t("footer13")}</a>
+              <a href="tel:+998938386767" className="Link"  onClick={scrollTo({top:0})}>   {t("footer13")}</a>
             </button>
           </div>
 
@@ -87,7 +87,7 @@ function Footer() {
             <hr />
             <div className="line_box">
               <p>   {t("footer14")}<br />   {t("footer15")}.</p>
-              <p><Link to="/terms-and-conditions" className="Link">   {t("footer16")}</Link></p>
+              <p><Link to="/terms" onClick={scrollTo({top:0})} className="Link">   {t("footer16")}</Link></p>
             </div>
           </div>
         </div>
