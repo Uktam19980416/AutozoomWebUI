@@ -12,7 +12,6 @@ function SearchContextProvider({ children }) {
   const handleSearchCar = (e) => {
     if (e.key === 'Enter') {
       navigate('/cars'); // Navigate to the CarsAll component when Enter is pressed
-      console.log('Enter');
     } else {
       setSearchCar(e.target.value);
     }
