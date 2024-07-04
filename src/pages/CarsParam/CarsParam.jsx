@@ -23,8 +23,6 @@ function CarsParam() {
   const [data, setData] = useState({});
   const { id } = useParams();
 
-  //CarsAll
-  // const [cars, setCars] = useState([]);
 
   //CarsParam
   const baseUrl = "https://autoapi.dezinfeksiyatashkent.uz/api";
