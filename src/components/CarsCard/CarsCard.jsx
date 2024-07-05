@@ -51,7 +51,7 @@ const CarsCard = () => {
             <div className='add-top'>
               <h1 className='add-title'>{category}</h1>
               <Link onClick={() =>  window.scrollTo({ top: 0 }) } to={`/cars/${groupedCars[category][0]?.id}`} className='add-sublink'>
-                SEE ALL <i className="left-icon fa-solid fa-chevron-right"></i>
+              {t('SEE_ALL')} <i className="left-icon fa-solid fa-chevron-right"></i>
               </Link>
             </div>
             <Swiper

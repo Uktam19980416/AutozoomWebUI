@@ -67,7 +67,7 @@ function Services() {
                 onClick={() => window.scrollTo({ top: 0 })}
                 className="services_sub_main_link"
               >
-                LEARN MORE{" "}
+                {t("servicesCard4")}{" "}
               </Link>
               <Link
                 to={"/services/photoshoot-with-luxury-car-in-dubai"}
