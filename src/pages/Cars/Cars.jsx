@@ -35,6 +35,8 @@ function Cars() {
     setMenuOpen(!menuOpen)
   }
 
+
+  
   useEffect(() => {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatas(data?.data)
