@@ -45,10 +45,10 @@ function Footer() {
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_blog"><Link  onClick={scrollTo({top:0})} to="/blog" className="Link">   {t("footer4")}</Link></h3>
-            <h3 className="footer_service"><Link onClick={scrollTo({top:0})} to="/services" className="Link">   {t("footer5")}</Link></h3>
+            <h3 className="footer_blog"><Link to="/blog"  onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer4")}</Link></h3>
+            <h3 className="footer_service"><Link to="/services"  onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer5")}</Link></h3>
             <div>
-              <h3 className="footer_contact"><Link to="/contacts"  onClick={scrollTo({top:0})} className="Link">   {t("footer6")}</Link></h3>
+              <h3 className="footer_contact"><Link to="/contacts"  onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer6")}</Link></h3>
               <p className="footer_text">
               {t("footer7")}
               </p>
@@ -62,9 +62,9 @@ function Footer() {
           </div>
 
           <div className="footer_part">
-            <h3 className="footer_about"><Link to="/about" className="Link"  onClick={scrollTo({top:0})}>   {t("footer9")}</Link></h3>
-            <p className="footer_text2"><Link to="/" className="Link"  onClick={scrollTo({top:0})}>  {t("footer10")}</Link></p>
-            <p className="footer_text2"><Link to="/faq" className="Link"  onClick={scrollTo({top:0})}>  {t("footer11")}</Link></p>
+            <h3 className="footer_about"><Link to="/about"  onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer9")}</Link></h3>
+            <p className="footer_text2"><Link to="/our-team"  onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer10")}</Link></p>
+            <p className="footer_text2"><Link to="/faq"  onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer11")}</Link></p>
             <h3 className="footer_follow">   {t("footer12")}</h3>
             <div className="follow_icon">
               <Link to="https://www.instagram.com/autozoomrental"  onClick={scrollTo({top:0})} target="_blank" className="Link"><FaInstagram size={25} /></Link>
@@ -85,7 +85,7 @@ function Footer() {
             <hr />
             <div className="line_box">
               <p>   {t("footer14")}<br />   {t("footer15")}.</p>
-              <p><Link to="/terms_and_conditions" onClick={scrollTo({top:0})} className="Link">   {t("footer16")}</Link></p>
+              <p><Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="Link">   {t("footer16")}</Link></p>
             </div>
           </div>
         </div>

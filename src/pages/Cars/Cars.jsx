@@ -2,7 +2,7 @@ import './Cars.css'
 import './Cars_resp.css'
 import { useEffect, useState } from 'react'
 import CarsAll from '../CarsAll/CarsAll'
-import menuIcon from '../../assets/react.svg'
+import menuIcon from '../../assets/images/menuIcon.svg';
 
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true)
