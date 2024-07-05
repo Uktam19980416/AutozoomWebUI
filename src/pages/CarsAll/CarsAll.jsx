@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchContext } from '../../context/SearchContext'
 import './CarsAll.css'
+import './CarsAll_resp.css';
 import { Link } from 'react-router-dom'
 
 const CarsAll = () => {
