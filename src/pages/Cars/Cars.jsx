@@ -38,14 +38,17 @@ function Cars() {
   useEffect(() => {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatas(data?.data)
+      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/categories`).then((data) => {
       setDatasCategory(data?.data)
+      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/brands`).then((data) => {
       setDatasBrand(data?.data)
+      console.log(data?.data)
     })
   }, [])
 
