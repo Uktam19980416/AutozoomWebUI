@@ -62,3 +62,120 @@ background: #1E1F27 !important;
     margin-top: 20px;
   }
 }
+/* For Desktop */
+.nav__brand {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.nav__brand_inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__brand_text {
+  text-decoration: none;
+  color: #edeaea;
+}
+
+.nav__brand_img {
+  width: 30px;
+}
+
+.nav__brand_hover {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #41424a;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.nav__right__ul_li:hover .nav__brand_hover {
+  display: block;
+  opacity: 1;
+}
+
+/* For Mobile */
+@media (max-width: 600px) {
+  .nav__head {
+    display: none;
+  }
+
+  .nav__head_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1rem;
+    background-color: #111219;
+  }
+
+  .nav__right__ul_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 999999;
+  }
+
+  .nav__brand {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .navbar__burger {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .menu_toggle:checked + .navbar__right_bar {
+    display: block;
+    left: 0;
+  }
+
+  .closeSvgImg {
+    cursor: pointer;
+    display: block;
+    color: white;
+    width: 50px;
+    position: fixed;
+    top: 20px;
+    z-index: 9999999;
+    right: 10px;
+    height: 50px;
+    transition: all 1.5s;
+  }
+
+  .nav__right__ul_mobile li {
+    width: 300px;
+    line-height: 70px;
+    height: auto;
+  }
+
+  .nav__right__ul_mobile li a {
+    font-size: 20px;
+  }
+}
