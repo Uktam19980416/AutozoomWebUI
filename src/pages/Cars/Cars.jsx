@@ -2,12 +2,11 @@ import './Cars.css'
 import './Cars_resp.css'
 import { useEffect, useState } from 'react'
 import CarsAll from '../CarsAll/CarsAll'
-import menuIcon from '../../assets/images/menuIcon.svg';
+import menuIcon from '../../assets/images/menuIcon.svg'
 
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true)
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
-  const [datas, setDatas] = useState([])
   const [datasCategory, setDatasCategory] = useState([])
   const [datasBrand, setDatasBrand] = useState([])
 
@@ -16,9 +15,7 @@ function Cars() {
   const [selectedCarTypes, setSelectedCarTypes] = useState([])
 
   const getFetch = async (url) => {
-    const response = await fetch(url, {
-      method: 'GET',
-    })
+    const response = await fetch(url, { method: 'GET' })
     return await response.json()
   }
 
@@ -35,22 +32,13 @@ function Cars() {
     setMenuOpen(!menuOpen)
   }
 
-
-  
   useEffect(() => {
-    getFetch(`${base_URL}/cars`).then((data) => {
-      setDatas(data?.data)
-      console.log(data?.data)
-    })
-
     getFetch(`${base_URL}/categories`).then((data) => {
       setDatasCategory(data?.data)
-      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/brands`).then((data) => {
       setDatasBrand(data?.data)
-      console.log(data?.data)
     })
   }, [])
 
@@ -73,8 +61,21 @@ function Cars() {
   }
 
   // Filtering brands and car types based on selected checkboxes
-  const filteredBrands = datasBrand.filter((brand) => selectedBrands.includes(brand.title))
-  const filteredCarTypes = datasCategory.filter((category) => selectedCarTypes.includes(category.name_en))
+  const filteredBrands = datasBrand.filter((brand) =>
+    selectedBrands.includes(brand.id)
+  )
+  const filteredCarTypes = datasCategory.filter((category) =>
+    selectedCarTypes.includes(category.id)
+  )
+
+  const handleReset = () => {
+    setSelectedBrands([])
+    setSelectedCarTypes([])
+  }
+
+  const handleApplyFilters = () => {
+    // Pass the filtered data to CarsAll component through props or context
+  }
 
   return (
     <div className="Cars_container_">
@@ -91,45 +92,14 @@ function Cars() {
               3 DAYS RENT = 5000 AED🔥 ALL INCLUSIVE
             </label>
           </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox2" />
-            <label htmlFor="checkBox2">3 DAYS RENT = 1300 AED🔥 ()</label>
-          </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox3" />
-            <label htmlFor="checkBox3">3 DAYS RENT = 1800 AED🔥</label>
-          </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox4" />
-            <label htmlFor="checkBox4">NO DEPOSIT</label>
-          </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox5" />
-            <label htmlFor="checkBox5">5000 AED🔥 ALL INCLUSIVE</label>
-          </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox6" />
-            <label htmlFor="checkBox6">
-              2 DAYS RENT = 5000 AED🔥 ALL INCLUSIVE
-            </label>
-          </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox7" />
-            <label htmlFor="checkBox7">Rent Ferrari Dubai</label>
-          </div>
-          <div className="Cars_sidebar_offers_info">
-            <input type="checkbox" id="checkBox8" />
-            <label htmlFor="checkBox8">
-              4 DAYS RENT = 5000 AED🔥 ALL INCLUSIVE
-            </label>
-          </div>
+          {/* Other offers checkboxes */}
         </div>
         <div className="Cars_sidebar_carType">
           <h4 className="Cars_sidebar_carType_header">Car Type</h4>
           {datasCategory.map((item, idx) => (
             <div className="Cars_sidebar_carType_info" key={idx}>
-              <input type="checkbox" id={item?.name_en} onChange={handleCarTypeChange} />
-              <label htmlFor={item?.name_en}>{item.name_en}</label>
+              <input type="checkbox" id={item.id} onChange={handleCarTypeChange} />
+              <label htmlFor={item.id}>{item.name_en}</label>
             </div>
           ))}
         </div>
@@ -137,8 +107,8 @@ function Cars() {
           <div className="Cars_sidebar_brand_header">Brand</div>
           {datasBrand.map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
-              <input type="checkbox" id={item?.title} onChange={handleBrandChange} />
-              <label htmlFor={item?.title}>{item.title}</label>
+              <input type="checkbox" id={item.id} onChange={handleBrandChange} />
+              <label htmlFor={item.id}>{item.title}</label>
             </div>
           ))}
         </div>
@@ -148,23 +118,20 @@ function Cars() {
             <select>
               <optgroup label="Brands">
                 {filteredBrands.map((brand, idx) => (
-                  <option key={idx} value={brand.title}>{brand.title}</option>
+                  <option key={idx} value={brand.id}>{brand.title}</option>
                 ))}
               </optgroup>
               <optgroup label="Car Types">
                 {filteredCarTypes.map((category, idx) => (
-                  <option key={idx} value={category.name_en}>{category.name_en}</option>
+                  <option key={idx} value={category.id}>{category.name_en}</option>
                 ))}
               </optgroup>
             </select>
           </div>
         </div>
         <div className="Cars_sidebar_buttons">
-          <button className="Cars_sidebar_buttons_reset" onClick={() => {
-            setSelectedBrands([]);
-            setSelectedCarTypes([]);
-          }}>Reset</button>
-          <button className="Cars_sidebar_buttons_apply">Apply Filter</button>
+          <button className="Cars_sidebar_buttons_reset" onClick={handleReset}>Reset</button>
+          <button className="Cars_sidebar_buttons_apply" onClick={handleApplyFilters}>Apply Filter</button>
         </div>
       </div>
       <div className="Cars_container_main" id="carsMain">
@@ -175,7 +142,7 @@ function Cars() {
           </a>
         </div>
         <div className="CarsAllComponent">
-          <CarsAll />
+          <CarsAll filteredBrands={filteredBrands} filteredCarTypes={filteredCarTypes} />
         </div>
       </div>
     </div>

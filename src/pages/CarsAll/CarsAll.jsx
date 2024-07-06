@@ -23,18 +23,6 @@ const CarsAll = () => {
   return (
     <div className="cars-all">
       <h1 className='cars-all-header'>All Cars</h1>
-      {/* <div className="cars-list">
-        {filteredCars.length > 0 ? (
-          filteredCars.map((car) => (
-            <div key={car.id} className="car-item">
-              <h2>{car.title}</h2>
-              <p>{car.description}</p>
-            </div>
-          ))
-        ) : (
-          <p>No cars found</p>
-        )}
-      </div> */}
       <div className="carsAll_container__">
         <div className="Cars_container_main_cars2">
           {filteredCars.length > 0 ? (
