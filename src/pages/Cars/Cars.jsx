@@ -7,12 +7,15 @@ import menuIcon from '../../assets/images/menuIcon.svg'
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true)
   const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
+  const [datasCar, setDatasCar] = useState([])
   const [datasCategory, setDatasCategory] = useState([])
   const [datasBrand, setDatasBrand] = useState([])
+  const [datasModel, setDatasModel] = useState([])
 
   // State for selected filters
   const [selectedBrands, setSelectedBrands] = useState([])
   const [selectedCarTypes, setSelectedCarTypes] = useState([])
+  const [filteredCars, setFilteredCars] = useState([])
 
   const getFetch = async (url) => {
     const response = await fetch(url, { method: 'GET' })
@@ -33,17 +36,31 @@ function Cars() {
   }
 
   useEffect(() => {
+    getFetch(`${base_URL}/cars`).then((data) => {
+      setDatasCar(data?.data)
+      setFilteredCars(data?.data)
+      console.log(data?.data)
+    })
+
     getFetch(`${base_URL}/categories`).then((data) => {
       setDatasCategory(data?.data)
+      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/brands`).then((data) => {
       setDatasBrand(data?.data)
+      console.log(data?.data)
+    })
+
+    getFetch(`${base_URL}/models`).then((data) => {
+      setDatasModel(data?.data)
+      console.log(data?.data)
     })
   }, [])
 
   const handleBrandChange = (e) => {
     const { id, checked } = e.target
+
     setSelectedBrands((prevSelectedBrands) =>
       checked
         ? [...prevSelectedBrands, id]
@@ -60,22 +77,64 @@ function Cars() {
     )
   }
 
-  // Filtering brands and car types based on selected checkboxes
-  const filteredBrands = datasBrand.filter((brand) =>
-    selectedBrands.includes(brand.id)
-  )
-  const filteredCarTypes = datasCategory.filter((category) =>
-    selectedCarTypes.includes(category.id)
-  )
-
   const handleReset = () => {
+    // Reset only selected checkboxes for brands and car types
     setSelectedBrands([])
     setSelectedCarTypes([])
+
+    document.querySelectorAll('.Cars_sidebar input[type="checkbox"]').forEach(checkbox => {
+      checkbox.checked = false
+    })
+    setFilteredCars(datasCar)
   }
 
   const handleApplyFilters = () => {
-    // Pass the filtered data to CarsAll component through props or context
+    let filteredCars = datasCar
+
+    if (selectedBrands.length > 0) {
+      filteredCars = filteredCars.filter(car =>
+        selectedBrands.includes(car.brand_id.toString())
+      )
+    }
+
+    if (selectedCarTypes.length > 0) {
+      filteredCars = filteredCars.filter(car =>
+        selectedCarTypes.includes(car.category_id.toString())
+      )
+    }
+
+    setFilteredCars(filteredCars)
   }
+
+  const getFilteredModels = () => {
+    let filteredCars = datasCar
+
+    if (selectedBrands.length > 0) {
+      filteredCars = filteredCars.filter(car =>
+        selectedBrands.includes(car.brand_id.toString())
+      )
+    }
+
+    if (selectedCarTypes.length > 0) {
+      filteredCars = filteredCars.filter(car =>
+        selectedCarTypes.includes(car.category_id.toString())
+      )
+    }
+
+    return filteredCars.map(car => {
+      return datasModel.find(model => model.id === car.model_id)
+    }).filter(model => model !== undefined)
+  }
+
+  const filteredModels = getFilteredModels()
+
+  // const filteredBrands = datasBrand.filter(brand =>
+  //   datasCar.some(car => car.brand_id === brand.id && selectedBrands.includes(car.brand_id.toString()))
+  // )
+
+  // const filteredCarTypes = datasCategory.filter(category =>
+  //   datasCar.some(car => car.category_id === category.id && selectedCarTypes.includes(car.category_id.toString()))
+  // )
 
   return (
     <div className="Cars_container_">
@@ -96,7 +155,7 @@ function Cars() {
         </div>
         <div className="Cars_sidebar_carType">
           <h4 className="Cars_sidebar_carType_header">Car Type</h4>
-          {datasCategory.map((item, idx) => (
+          {datasCategory.filter(item => datasCar.some(item2 => item2.category_id === item.id)).map((item, idx) => (
             <div className="Cars_sidebar_carType_info" key={idx}>
               <input type="checkbox" id={item.id} onChange={handleCarTypeChange} />
               <label htmlFor={item.id}>{item.name_en}</label>
@@ -105,7 +164,7 @@ function Cars() {
         </div>
         <div className="Cars_sidebar_main_brand">
           <div className="Cars_sidebar_brand_header">Brand</div>
-          {datasBrand.map((item, idx) => (
+          {datasBrand.filter(item => datasCar.some(item2 => item2.brand_id === item.id)).map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
               <input type="checkbox" id={item.id} onChange={handleBrandChange} />
               <label htmlFor={item.id}>{item.title}</label>
@@ -116,16 +175,10 @@ function Cars() {
           <div className="Cars_sidebar_model_info">Model</div>
           <div className="Cars_sidebar_model_select">
             <select>
-              <optgroup label="Brands">
-                {filteredBrands.map((brand, idx) => (
-                  <option key={idx} value={brand.id}>{brand.title}</option>
-                ))}
-              </optgroup>
-              <optgroup label="Car Types">
-                {filteredCarTypes.map((category, idx) => (
-                  <option key={idx} value={category.id}>{category.name_en}</option>
-                ))}
-              </optgroup>
+              <option value="">Select a model</option>
+              {filteredModels.map((item, idx) => (
+                <option key={idx} value={item.id}>{item.name}</option>
+              ))}
             </select>
           </div>
         </div>
@@ -142,7 +195,7 @@ function Cars() {
           </a>
         </div>
         <div className="CarsAllComponent">
-          <CarsAll filteredBrands={filteredBrands} filteredCarTypes={filteredCarTypes} />
+          <CarsAll filteredCars={filteredCars} />
         </div>
       </div>
     </div>
