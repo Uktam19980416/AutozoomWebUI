@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './Cars.css'
 import './Cars_resp.css'
 import { useEffect, useState } from 'react'
