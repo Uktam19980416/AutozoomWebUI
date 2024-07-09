@@ -6,7 +6,7 @@ import ru from '../../assets/images/ru.png'
 import { CiSearch } from 'react-icons/ci'
 import { FaBarsStaggered } from 'react-icons/fa6'
 import logo from '../../assets/images/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchContext } from '../../context/SearchContext'
@@ -14,6 +14,7 @@ import { useSearchContext } from '../../context/SearchContext'
 function Navbar() {
   const { t, i18n } = useTranslation()
   const languages = localStorage.getItem('i18nextLng') || 'uz'
+  const navigate = useNavigate()
 
   const handleChange = (lang) => {
     i18n.changeLanguage(lang)
@@ -24,12 +25,8 @@ function Navbar() {
   const [datas, setDatas] = useState([])
   const [isBrandHover, setIsBrandHover] = useState(false)
 
-  //
   const [navbarBlock, setNavbarBlock] = useState(false)
-  // const {datasCar, searchCar, handleSearchCar} = useSearchContext()
   const { searchCar, handleSearchCar } = useSearchContext()
-
-  // console.log(datasCar, searchCar)
 
   const getFetch = async (url) => {
     const response = await fetch(url, {
@@ -43,6 +40,10 @@ function Navbar() {
       setDatas(data?.data)
     })
   }, [])
+
+  const handleBrandClick = (brandId) => {
+    navigate('/cars', { state: { selectedBrand: brandId } });
+  }
 
   return (
     <>
@@ -102,18 +103,20 @@ function Navbar() {
                     <div className={styles.nav__brand_hover}>
                       <div className={styles.nav__brand}>
                         {datas.map((data) => (
-                          <Link to={`/cars/${data.id}`} key={data.id}>
-                            <div className={styles.nav__brand_inline}>
-                              <img
-                                className={styles.nav__brand_img}
-                                src={`${base_URL2}${data.image_src}`}
-                                alt="Brand"
-                              />
-                              <p className={styles.nav__brand_text}>
-                                {data.title}
-                              </p>
-                            </div>
-                          </Link>
+                          <div 
+                            key={data.id} 
+                            onClick={() => handleBrandClick(data.id)}
+                            className={styles.nav__brand_inline}
+                          >
+                            <img
+                              className={styles.nav__brand_img}
+                              src={`${base_URL2}${data.image_src}`}
+                              alt="Brand"
+                            />
+                            <p className={styles.nav__brand_text}>
+                              {data.title}
+                            </p>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -230,4 +233,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;
