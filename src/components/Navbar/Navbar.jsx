@@ -102,7 +102,7 @@ function Navbar() {
                     <div className={styles.nav__brand_hover}>
                       <div className={styles.nav__brand}>
                         {datas.map((data) => (
-                          <Link to={`/brand/${data.id}`} key={data.id}>
+                          <Link to={`/cars/${data.id}`} key={data.id}>
                             <div className={styles.nav__brand_inline}>
                               <img
                                 className={styles.nav__brand_img}
