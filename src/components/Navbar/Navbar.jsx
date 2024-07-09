@@ -20,16 +20,14 @@ function Navbar() {
   }
 
   const base_URL = 'https://realauto.limsa.uz/api'
-  const base_URL2 =
-    'https://realauto.limsa.uz/api/uploads/images/'
+  const base_URL2 = 'https://realauto.limsa.uz/api/uploads/images/'
   const [datas, setDatas] = useState([])
   const [isBrandHover, setIsBrandHover] = useState(false)
 
-
   //
-  const [navbarBlock, setNavbarBlock] = useState(false);
+  const [navbarBlock, setNavbarBlock] = useState(false)
   // const {datasCar, searchCar, handleSearchCar} = useSearchContext()
-  const { searchCar, handleSearchCar } = useSearchContext();
+  const { searchCar, handleSearchCar } = useSearchContext()
 
   // console.log(datasCar, searchCar)
 
@@ -186,16 +184,24 @@ function Navbar() {
       </div>
       <input type="checkbox" id="menu-toggle" className={styles.menu_toggle} />
       <div className={styles.navbar__right_bar} id="mobileBlock">
-                  <label htmlFor="menu-toggle">
-                  <img src={closeSvg} className={styles.closeSvgImg} alt="" id="closeImg"/>
-                  </label>
+        <label htmlFor="menu-toggle">
+          <img
+            src={closeSvg}
+            className={styles.closeSvgImg}
+            alt=""
+            id="closeImg"
+          />
+        </label>
         <ul className={styles.nav__right__ul_mobile}>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/cars">
               {t('cars')}
             </Link>
           </li>
-          <li className={styles.nav__right__ul_li}>
+          <li className={styles.nav__right__ul_li}
+            onMouseEnter={() => setIsBrandHover(true)}
+            onMouseLeave={() => setIsBrandHover(false)}
+          >
             <Link className={styles.nav__right__ul_li_a}>{t('brand')}</Link>
           </li>
           <li className={styles.nav__right__ul_li}>
