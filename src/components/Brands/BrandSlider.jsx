@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination } from 'swiper/modules';
 import { useTranslation } from 'react-i18next'
-
 
 import 'swiper/css';
 import 'swiper/css/grid';
@@ -26,7 +25,12 @@ const Brands = () => {
     });
   }, []);
 
-   const {t} = useTranslation()
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleBrandClick = (brandId) => {
+    navigate('/cars', { state: { selectedBrand: brandId } });
+  };
 
   return (
     <div className="BrandWrapper">
@@ -65,16 +69,14 @@ const Brands = () => {
           >
             {datas.map((item) => (
               <SwiperSlide key={item.id} className="swiper-slidebrand">
-                <Link to={`/cars/${item.id}`} className="brand__images" onClick={() =>
-                  window.scrollTo({ top: 0 })
-              }>
+                <div className="brand__images" onClick={() => handleBrandClick(item.id)}>
                   <img
                     src={`${base_URL2}${item.image_src}`}
                     alt={item.title}
                     className="brand__img"
                   />
                   <p className="brand__text">{item.title}</p>
-                </Link>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>
