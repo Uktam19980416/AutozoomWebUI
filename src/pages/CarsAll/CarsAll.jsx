@@ -5,11 +5,11 @@ import './CarsAll_resp.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-const CarsAll = ({ filteredCars }) => {
+const CarsAll = ({ filteredCars = [] }) => {
   const { searchCar } = useSearchContext()
   const { t } = useTranslation()
   const [displayedCars, setDisplayedCars] = useState(filteredCars)
-  const baseImgUrl = 'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/'
+  const baseImgUrl = 'https://realauto.limsa.uz/api/uploads/images/'
 
   useEffect(() => {
     setDisplayedCars(
@@ -34,7 +34,7 @@ const CarsAll = ({ filteredCars }) => {
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
-                  <div className="Cars_container_main_car_imgContainer2" key={index}>
+                  <div className="Cars_container_main_car_imgContainer2">
                     <img
                       src={`${baseImgUrl}/${car.car_images[0]?.image?.src}`}
                       alt=""

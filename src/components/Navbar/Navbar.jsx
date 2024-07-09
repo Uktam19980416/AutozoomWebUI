@@ -19,9 +19,9 @@ function Navbar() {
     i18n.changeLanguage(lang)
   }
 
-  const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
+  const base_URL = 'https://realauto.limsa.uz/api'
   const base_URL2 =
-    'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/'
+    'https://realauto.limsa.uz/api/uploads/images/'
   const [datas, setDatas] = useState([])
   const [isBrandHover, setIsBrandHover] = useState(false)
 

@@ -11,8 +11,8 @@ import 'swiper/css/pagination';
 import './Brands.css';
 
 const Brands = () => {
-  const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api';
-  const base_URL2 = 'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/';
+  const base_URL = 'https://realauto.limsa.uz/api';
+  const base_URL2 = 'https://realauto.limsa.uz/api/uploads/images/';
   const [datas, setDatas] = useState([]);
 
   const getFetch = async (url) => {

@@ -25,9 +25,9 @@ function CarsParam() {
 
 
   //CarsParam
-  const baseUrl = "https://autoapi.dezinfeksiyatashkent.uz/api";
+  const baseUrl = "https://realauto.limsa.uz/api";
   const baseImgUrl =
-    "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
+    "https://realauto.limsa.uz/api/uploads/images/";
 
   const getData = () => {
     fetch(`${baseUrl}/cars/${id}`) //id should be given there
