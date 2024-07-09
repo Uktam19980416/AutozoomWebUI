@@ -7,7 +7,7 @@ import menuIcon from '../../assets/images/menuIcon.svg'
 
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true)
-  const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
+  const base_URL = 'https://realauto.limsa.uz/api'
   const [datasCar, setDatasCar] = useState([])
   const [datasCategory, setDatasCategory] = useState([])
   const [datasBrand, setDatasBrand] = useState([])
@@ -40,22 +40,18 @@ function Cars() {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatasCar(data?.data)
       setFilteredCars(data?.data)
-      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/categories`).then((data) => {
       setDatasCategory(data?.data)
-      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/brands`).then((data) => {
       setDatasBrand(data?.data)
-      console.log(data?.data)
     })
 
     getFetch(`${base_URL}/models`).then((data) => {
       setDatasModel(data?.data)
-      console.log(data?.data)
     })
   }, [])
 
