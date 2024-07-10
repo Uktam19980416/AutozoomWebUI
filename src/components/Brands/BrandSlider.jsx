@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next'
+
 
 import 'swiper/css';
 import 'swiper/css/grid';
@@ -24,10 +26,12 @@ const Brands = () => {
     });
   }, []);
 
+   const {t} = useTranslation()
+
   return (
     <div className="BrandWrapper">
       <div className="container">
-        <h2 className="brands-title">BRANDS</h2>
+        <h2 className="brands-title">{t("brands")}</h2>
         <div className="Brands-Swipper-flex">
           <Swiper
             slidesPerView={4}
