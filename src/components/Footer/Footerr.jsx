@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa';
 import './Footer.css';
-import Logo from '../../assets/images/logo.svg';
+import Logo from '../../../public/pngwing.com.png';
 import { useTranslation } from 'react-i18next';
 
 function Footer() {
@@ -25,7 +25,7 @@ function Footer() {
         <div className="footer_box">
           <div className="footer_part">
             <Link to="/" className="Link"  onClick={scrollTo({top:0})}>
-              <img width={100} src={Logo} alt="Logo" />
+              <img width={70} src={Logo} alt="Logo" />
             </Link>
             <h1 className="footer_title">
               {t("footer1")}
