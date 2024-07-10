@@ -15,7 +15,7 @@ function Cars() {
   const [datasModel, setDatasModel] = useState([]);
 
   // State for selected filters
-  const [selectedLocations, setSelectedLocations] = useState([]);
+  // const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedCarTypes, setSelectedCarTypes] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
@@ -72,7 +72,7 @@ function Cars() {
     if (location.state?.selectedLocation) {
       const filtered = datasCar.filter(car => car.location_id.toString() === location.state.selectedLocation.toString());
       setFilteredCars(filtered);
-      setSelectedLocations([location.state.selectedLocation]);
+      setSelectedBrands([location.state.selectedLocation]);
     }
   }, [location.state, datasCar]);
 
@@ -80,7 +80,7 @@ function Cars() {
     if (location.state?.selectedCity) {
       const filtered = datasCar.filter(car => car.city_id.toString() === location.state.selectedCity.toString());
       setFilteredCars(filtered);
-      setSelectedLocations([location.state.selectedCity]);
+      setSelectedBrands([location.state.selectedCity]);
     }
   }, [location.state, datasCar]);
 

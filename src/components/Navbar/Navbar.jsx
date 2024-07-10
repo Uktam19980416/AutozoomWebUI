@@ -5,7 +5,7 @@ import closeSvg from '../../assets/close.svg'
 import ru from '../../assets/images/ru.png'
 import { CiSearch } from 'react-icons/ci'
 import { FaBarsStaggered } from 'react-icons/fa6'
-import logo from '../../assets/images/logo.svg'
+import logo from '../../../public/pngwing.com.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -80,7 +80,7 @@ function Navbar() {
               </div>
               <div>
                 <Link to="/">
-                  <img width={100} src={logo} alt="" />
+                  <img width={70} src={logo} alt="" />
                 </Link>
               </div>
             </div>
