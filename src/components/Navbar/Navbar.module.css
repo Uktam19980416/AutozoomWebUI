@@ -166,6 +166,7 @@
   padding: 1rem;
   border-radius: 20px;
   z-index: 99999;
+  cursor: pointer;
 }
 
 .nav__right__ul_li:hover .nav__brand_hover {

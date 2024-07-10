@@ -9,7 +9,7 @@ function Footer() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.autozoomrental.com/api/categories')
+    fetch('https://realauto.limsa.uz/api/categories')
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {

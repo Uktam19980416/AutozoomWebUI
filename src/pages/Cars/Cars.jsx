@@ -15,6 +15,7 @@ function Cars() {
   const [datasModel, setDatasModel] = useState([]);
 
   // State for selected filters
+  const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedCarTypes, setSelectedCarTypes] = useState([]);
   const [filteredCars, setFilteredCars] = useState([]);
@@ -43,6 +44,7 @@ function Cars() {
     getFetch(`${base_URL}/cars`).then((data) => {
       setDatasCar(data?.data);
       setFilteredCars(data?.data);
+      console.log(data?.data);
     });
 
     getFetch(`${base_URL}/categories`).then((data) => {
@@ -63,6 +65,14 @@ function Cars() {
       const filtered = datasCar.filter(car => car.brand_id.toString() === location.state.selectedBrand.toString());
       setFilteredCars(filtered);
       setSelectedBrands([location.state.selectedBrand]);
+    }
+  }, [location.state, datasCar]);
+
+  useEffect(() => {
+    if (location.state?.selectedLocation) {
+      const filtered = datasCar.filter(car => car.location_id.toString() === location.state.selectedLocation.toString());
+      setFilteredCars(filtered);
+      setSelectedLocations([location.state.selectedLocation]);
     }
   }, [location.state, datasCar]);
 
@@ -124,6 +134,8 @@ function Cars() {
   };
 
   const filteredModels = getFilteredModels();
+
+  console.log(selectedBrands);
 
   return (
     <div className="Cars_container_">

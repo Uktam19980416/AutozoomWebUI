@@ -9,6 +9,7 @@ import './Home.css';
 import Youtube from '../../components/YoutubeContent/Youtube';
 import Rental from '../../components/Rental/Rental';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const {t} = useTranslation()
@@ -17,10 +18,10 @@ function Home() {
   const [cities, setCities] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null); 
   
-  const UrlImg = 'https://api.autozoomrental.com/api/uploads/images/';
+  const UrlImg = 'https://realauto.limsa.uz/api/uploads/images/';
 
   useEffect(() => {
-    fetch('https://api.autozoomrental.com/api/categories')
+    fetch('https://realauto.limsa.uz/api/categories')
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -30,7 +31,7 @@ function Home() {
       .catch((error) => console.error('Error fetching categories:', error));
 
     // Fetch locations
-    fetch('https://api.autozoomrental.com/api/locations')
+    fetch('https://realauto.limsa.uz/api/locations')
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -40,7 +41,7 @@ function Home() {
       .catch((error) => console.error('Error fetching locations:', error));
 
    
-    fetch('https://api.autozoomrental.com/api/cities')
+    fetch('https://realauto.limsa.uz/api/cities')
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
@@ -50,7 +51,11 @@ function Home() {
       .catch((error) => console.error('Error fetching cities:', error));
   }, []);
 
-  
+  const navigate = useNavigate();
+
+  const handleLocationClick = (locationId) => {
+    navigate('/cars', { state: { selectedLocation: locationId } });
+  };
 
   return (
     <>
@@ -80,14 +85,14 @@ function Home() {
               <h1>{t("faq14")}</h1>
               {locations.map((location) => (
                 <div key={location.id}>
-                  <a className='home-link' href={`/locations/${location.id}`}>{location.name}</a>
+                  <div className='home-link' onClick={() => handleLocationClick(location.id)}>{location.name}</div>
                 </div>
               ))}
             </div>
             <div className="home-local-2"><h1>{t("faq15")}</h1>
               {cities.map((city) => (
                 <div key={city.id}>
-                  <a className='home-link' href={`/cities/${city.id}`}>{city.name}</a>
+                  <a className='home-link' href={`/cars/${city.id}`}>{city.name}</a>
                 </div>
               ))}
             </div>
