@@ -76,6 +76,14 @@ function Cars() {
     }
   }, [location.state, datasCar]);
 
+  useEffect(() => {
+    if (location.state?.selectedCity) {
+      const filtered = datasCar.filter(car => car.city_id.toString() === location.state.selectedCity.toString());
+      setFilteredCars(filtered);
+      setSelectedLocations([location.state.selectedCity]);
+    }
+  }, [location.state, datasCar]);
+
   const handleBrandChange = (e) => {
     const { id, checked } = e.target;
     setSelectedBrands((prevSelectedBrands) =>

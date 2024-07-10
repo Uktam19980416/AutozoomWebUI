@@ -57,6 +57,10 @@ function Home() {
     navigate('/cars', { state: { selectedLocation: locationId } });
   };
 
+  const handleCityClick = (cityId) => {
+    navigate('/cars', { state: { selectedCity: cityId } });
+  };
+
   return (
     <>
       <MainSlider />
@@ -92,7 +96,7 @@ function Home() {
             <div className="home-local-2"><h1>{t("faq15")}</h1>
               {cities.map((city) => (
                 <div key={city.id}>
-                  <a className='home-link' href={`/cars/${city.id}`}>{city.name}</a>
+                  <div className='home-link' onClick={() => handleCityClick(city.id)}>{city.name}</div>
                 </div>
               ))}
             </div>

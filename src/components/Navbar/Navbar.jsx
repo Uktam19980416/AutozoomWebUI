@@ -42,7 +42,7 @@ function Navbar() {
   }, [])
 
   const handleBrandClick = (brandId) => {
-    navigate('/cars', { state: { selectedBrand: brandId } });
+    navigate('/cars', { state: { selectedBrand: brandId } })
   }
 
   return (
@@ -103,8 +103,8 @@ function Navbar() {
                     <div className={styles.nav__brand_hover}>
                       <div className={styles.nav__brand}>
                         {datas.map((data) => (
-                          <div 
-                            key={data.id} 
+                          <div
+                            key={data.id}
                             onClick={() => handleBrandClick(data.id)}
                             className={styles.nav__brand_inline}
                           >
@@ -170,6 +170,9 @@ function Navbar() {
                 className={styles.nav__search__input}
                 type="text"
                 placeholder="Search..."
+                value={searchCar}
+                onChange={handleSearchCar}
+                onKeyDown={handleSearchCar}
               />
             </div>
             <div>
@@ -201,7 +204,8 @@ function Navbar() {
               {t('cars')}
             </Link>
           </li>
-          <li className={styles.nav__right__ul_li}
+          <li
+            className={styles.nav__right__ul_li}
             onMouseEnter={() => setIsBrandHover(true)}
             onMouseLeave={() => setIsBrandHover(false)}
           >
@@ -233,4 +237,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+export default Navbar
