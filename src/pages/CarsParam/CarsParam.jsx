@@ -24,11 +24,9 @@ function CarsParam() {
   const [data, setData] = useState({});
   const { id } = useParams();
 
-
   //CarsParam
   const baseUrl = "https://realauto.limsa.uz/api";
-  const baseImgUrl =
-    "https://realauto.limsa.uz/api/uploads/images/";
+  const baseImgUrl = "https://realauto.limsa.uz/api/uploads/images/";
 
   const getData = () => {
     fetch(`${baseUrl}/cars/${id}`) //id should be given there
@@ -94,7 +92,9 @@ function CarsParam() {
                 AED/km)
               </h4>
               <p className="greyishText-1">{t("depositAmount")}</p>
-              <h4>{t("refunded")} {data?.deposit} {t("days")}</h4>
+              <h4>
+                {t("refunded")} {data?.deposit} {t("days")}
+              </h4>
             </div>
           </div>
         </div>
@@ -442,20 +442,14 @@ function CarsParam() {
             </div>
           </div>
           <div className="row_1_1">
-            <span className="greyishText_">
-              {t("row1")}
-            </span>
-            <span className="greyishText_">
-              {t("row2")}
-            </span>
-            <span className="greyishText_">
-             {t("row3")}
-            </span>
+            <span className="greyishText_">{t("row1")}</span>
+            <span className="greyishText_">{t("row2")}</span>
+            <span className="greyishText_">{t("row3")}</span>
           </div>
         </div>
       </div>
       <div className="container__1">
-        <CarsAll getData={getData} />
+        <CarsAll filteredCars={[]} />
       </div>
     </div>
   );

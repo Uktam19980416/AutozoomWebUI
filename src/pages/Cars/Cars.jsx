@@ -108,6 +108,7 @@ function Cars() {
       checkbox.checked = false;
     });
     setFilteredCars(datasCar);
+    scrollTo({top: 0});
   };
 
   const handleApplyFilters = () => {
@@ -122,6 +123,7 @@ function Cars() {
     }
 
     setFilteredCars(filteredCars);
+    scrollTo({top: 0})
   };
 
   const getFilteredModels = () => {
