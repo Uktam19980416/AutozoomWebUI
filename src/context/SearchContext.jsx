@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const SearchContext = createContext(undefined);
 
 function SearchContextProvider({ children }) {
-  const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api';
+  const base_URL = 'https://realauto.limsa.uz/api';
   const [datasCar, setDatasCar] = useState([]);
   const [searchCar, setSearchCar] = useState('');
   const navigate = useNavigate();

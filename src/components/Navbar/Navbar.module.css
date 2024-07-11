@@ -135,7 +135,7 @@
 }
 
 .nav__brand {
-  width: 50%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -165,6 +165,7 @@
   background-color: #41424a;
   padding: 1rem;
   border-radius: 20px;
+  z-index: 99999;
 }
 
 .nav__right__ul_li:hover .nav__brand_hover {

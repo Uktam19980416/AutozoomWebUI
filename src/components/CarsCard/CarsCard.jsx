@@ -19,10 +19,10 @@ const CarsCard = () => {
     getCars();
   }, []);
 
-  const urlImg = "https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/";
+  const urlImg = "https://realauto.limsa.uz/api/uploads/images/";
 
   const getCars = () => {
-    fetch('https://autoapi.dezinfeksiyatashkent.uz/api/cars')
+    fetch('https://realauto.limsa.uz/api/cars')
       .then((res) => res.json())
       .then((data) => {
         setCars(data?.data || []);

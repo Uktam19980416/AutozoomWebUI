@@ -6,7 +6,7 @@ import ru from '../../assets/images/ru.png'
 import { CiSearch } from 'react-icons/ci'
 import { FaBarsStaggered } from 'react-icons/fa6'
 import logo from '../../assets/images/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchContext } from '../../context/SearchContext'
@@ -14,24 +14,19 @@ import { useSearchContext } from '../../context/SearchContext'
 function Navbar() {
   const { t, i18n } = useTranslation()
   const languages = localStorage.getItem('i18nextLng') || 'uz'
+  const navigate = useNavigate()
 
   const handleChange = (lang) => {
     i18n.changeLanguage(lang)
   }
 
-  const base_URL = 'https://autoapi.dezinfeksiyatashkent.uz/api'
-  const base_URL2 =
-    'https://autoapi.dezinfeksiyatashkent.uz/api/uploads/images/'
+  const base_URL = 'https://realauto.limsa.uz/api'
+  const base_URL2 = 'https://realauto.limsa.uz/api/uploads/images/'
   const [datas, setDatas] = useState([])
   const [isBrandHover, setIsBrandHover] = useState(false)
 
-
-  //
-  const [navbarBlock, setNavbarBlock] = useState(false);
-  // const {datasCar, searchCar, handleSearchCar} = useSearchContext()
-  const { searchCar, handleSearchCar } = useSearchContext();
-
-  // console.log(datasCar, searchCar)
+  const [navbarBlock, setNavbarBlock] = useState(false)
+  const { searchCar, handleSearchCar } = useSearchContext()
 
   const getFetch = async (url) => {
     const response = await fetch(url, {
@@ -45,6 +40,10 @@ function Navbar() {
       setDatas(data?.data)
     })
   }, [])
+
+  const handleBrandClick = (brandId) => {
+    navigate('/cars', { state: { selectedBrand: brandId } });
+  }
 
   return (
     <>
@@ -104,18 +103,20 @@ function Navbar() {
                     <div className={styles.nav__brand_hover}>
                       <div className={styles.nav__brand}>
                         {datas.map((data) => (
-                          <Link to={`/brand/${data.id}`} key={data.id}>
-                            <div className={styles.nav__brand_inline}>
-                              <img
-                                className={styles.nav__brand_img}
-                                src={`${base_URL2}${data.image_src}`}
-                                alt="Brand"
-                              />
-                              <p className={styles.nav__brand_text}>
-                                {data.title}
-                              </p>
-                            </div>
-                          </Link>
+                          <div 
+                            key={data.id} 
+                            onClick={() => handleBrandClick(data.id)}
+                            className={styles.nav__brand_inline}
+                          >
+                            <img
+                              className={styles.nav__brand_img}
+                              src={`${base_URL2}${data.image_src}`}
+                              alt="Brand"
+                            />
+                            <p className={styles.nav__brand_text}>
+                              {data.title}
+                            </p>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -186,16 +187,24 @@ function Navbar() {
       </div>
       <input type="checkbox" id="menu-toggle" className={styles.menu_toggle} />
       <div className={styles.navbar__right_bar} id="mobileBlock">
-                  <label htmlFor="menu-toggle">
-                  <img src={closeSvg} className={styles.closeSvgImg} alt="" id="closeImg"/>
-                  </label>
+        <label htmlFor="menu-toggle">
+          <img
+            src={closeSvg}
+            className={styles.closeSvgImg}
+            alt=""
+            id="closeImg"
+          />
+        </label>
         <ul className={styles.nav__right__ul_mobile}>
           <li className={styles.nav__right__ul_li}>
             <Link className={styles.nav__right__ul_li_a} to="/cars">
               {t('cars')}
             </Link>
           </li>
-          <li className={styles.nav__right__ul_li}>
+          <li className={styles.nav__right__ul_li}
+            onMouseEnter={() => setIsBrandHover(true)}
+            onMouseLeave={() => setIsBrandHover(false)}
+          >
             <Link className={styles.nav__right__ul_li_a}>{t('brand')}</Link>
           </li>
           <li className={styles.nav__right__ul_li}>
@@ -224,4 +233,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Navbar;
