@@ -172,8 +172,8 @@ html {
 }
 .infoContainer .row_1 .forForm form button {
   margin: 10px;
-  width: 100px;
-  height: 60px;
+  padding-inline: 20px;
+  padding-block: 15px;
   color: white;
   background-color: red;
   font-size: 20px;

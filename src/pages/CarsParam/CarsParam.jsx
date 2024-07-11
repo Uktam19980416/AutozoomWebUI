@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import CarsAll from "../CarsAll/CarsAll";
+import { t } from "i18next";
 
 function CarsParam() {
   //CarsParam
@@ -82,18 +83,18 @@ function CarsParam() {
           <div className="row">
             <div className="carInfo">
               <h3 className="heading-1">
-                Good to know about {data?.model?.name}
+                {t("goodToKnow")} {data?.model?.name}
               </h3>
-              <p className="greyishText-1">Kilometrage limit per day</p>
+              <p className="greyishText-1">{t("kiloPerDay")}</p>
               <h4>
-                {data?.max_speed} (Every extra km will be charged
+                {data?.max_speed} ({t("kmWillCharge")}
                 <span style={{ paddingLeft: "5px" }}>
                   {data?.transmission}
                 </span>{" "}
                 AED/km)
               </h4>
-              <p className="greyishText-1">Car rental deposit amount</p>
-              <h4>The deposit is refunded within {data?.deposit} days</h4>
+              <p className="greyishText-1">{t("depositAmount")}</p>
+              <h4>{t("refunded")} {data?.deposit} {t("days")}</h4>
             </div>
           </div>
         </div>
@@ -106,25 +107,25 @@ function CarsParam() {
                   / $ {data?.price_in_usd}
                 </span>
               </h2>
-              <h5 className="greyishText">per day</h5>
+              <h5 className="greyishText">{t("per_day")}</h5>
               <del>
                 AED <span className="greyishText"> / $</span>
               </del>
             </div>
             <div className="col-lg-4_1">
               <div>
-                <h6 className="greyishText">Deposit</h6>
-                <h6 className="greyishText">Premium Protection</h6>
+                <h6 className="greyishText">{t("deposit")}</h6>
+                <h6 className="greyishText">{t("premPro")}</h6>
               </div>
             </div>
             <div className="col-lg-4_1">
               <h4>AED {data.price_in_aed_sale}</h4>
               <h6 className="greyishText">
-                AED {data.price_in_aed_sale} for credit cards payment
+                AED {data.price_in_aed_sale} {t("credCard")}
               </h6>
               <h4>AED {data.premium_protection}</h4>
               <h6 className="greyishText">
-                AED {data.premium_protection} price per day
+                AED {data.premium_protection} {t("pricePerDay")}
               </h6>
             </div>
           </div>
@@ -436,19 +437,19 @@ function CarsParam() {
                 <br />
                 <input required type="text" placeholder="Details" />
                 <br />
-                <button>Send</button>
+                <button>{t("sendBtn")}</button>
               </form>
             </div>
           </div>
           <div className="row_1_1">
             <span className="greyishText_">
-              The price doesn`t include additional 5% VAT.
+              {t("row1")}
             </span>
             <span className="greyishText_">
-              There is a 3% transaction fee when paying by credit/debit card.
+              {t("row2")}
             </span>
             <span className="greyishText_">
-              There is a 7% transaction fee when paying with American Express.
+             {t("row3")}
             </span>
           </div>
         </div>

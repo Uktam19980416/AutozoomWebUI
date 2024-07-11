@@ -5,6 +5,7 @@ import menuIcon from '../../assets/images/menuIcon.svg';
 
 import './Cars.css';
 import './Cars_resp.css';
+import { t } from 'i18next';
 
 function Cars() {
   const [menuOpen, setMenuOpen] = useState(true);
@@ -151,17 +152,17 @@ function Cars() {
         <img src={menuIcon} width={30} height={30} alt="" />
       </div>
       <div className="Cars_sidebar " id="sidebarBlock">
-        <h2 className="Cars_sidebar_header">Filter By</h2>
+        <h2 className="Cars_sidebar_header">{t("carsFilter")}</h2>
         <div className="Cars_sidebar_offers">
-          <h4 className="Cars_sidebar_offers_header">Offers</h4>
+          <h4 className="Cars_sidebar_offers_header">{t("carsOffer")}</h4>
           <div className="Cars_sidebar_offers_info">
             <input type="checkbox" id="checkBox1" />
-            <label htmlFor="checkBox1">3 DAYS RENT = 5000 AED🔥 ALL INCLUSIVE</label>
+            <label htmlFor="checkBox1">{t("carsOffersInfo")}</label>
           </div>
           {/* Other offers checkboxes */}
         </div>
         <div className="Cars_sidebar_carType">
-          <h4 className="Cars_sidebar_carType_header">Car Type</h4>
+          <h4 className="Cars_sidebar_carType_header">{t("carsType")}</h4>
           {datasCategory.filter((item) => datasCar.some((item2) => item2.category_id === item.id)).map((item, idx) => (
             <div className="Cars_sidebar_carType_info" key={idx}>
               <input type="checkbox" id={item.id} onChange={handleCarTypeChange} />
@@ -170,7 +171,7 @@ function Cars() {
           ))}
         </div>
         <div className="Cars_sidebar_main_brand">
-          <div className="Cars_sidebar_brand_header">Brand</div>
+          <div className="Cars_sidebar_brand_header">{t("carsBrand")}</div>
           {datasBrand.filter((item) => datasCar.some((item2) => item2.brand_id === item.id)).map((item, idx) => (
             <div className="Cars_sidebar_brand_info" key={idx}>
               <input type="checkbox" id={item.id} onChange={handleBrandChange} />
@@ -179,7 +180,7 @@ function Cars() {
           ))}
         </div>
         <div className="Cars_sidebar_modal">
-          <div className="Cars_sidebar_model_info">Model</div>
+          <div className="Cars_sidebar_model_info">{t("carsModel")}</div>
           <div className="Cars_sidebar_model_select">
             <select>
               <option value="">Select a model</option>
@@ -193,17 +194,17 @@ function Cars() {
         </div>
         <div className="Cars_sidebar_buttons">
           <button className="Cars_sidebar_buttons_reset" onClick={handleReset}>
-            Reset
+            {t("carsBtnReset")}
           </button>
           <button className="Cars_sidebar_buttons_apply" onClick={handleApplyFilters}>
-            Apply Filter
+            {t("carsBtnApply")}
           </button>
         </div>
       </div>
       <div className="Cars_container_main" id="carsMain">
         <div className="Cars_container_main_header">
           <a href="/" className="Cars_container_main_link">
-            <span>Luxury Cars for Rent in Dubai </span> <span>/ Hire the latest supercar</span>
+            <span>{t("carsMainLink1")}</span> <span>{t("carsMainLink2")}</span>
           </a>
         </div>
         <div className="CarsAllComponent">

@@ -43,7 +43,7 @@ function Blog() {
               {t("One_of_the_main_reasons")}
             </p>
             <div className="Blog_col_info_col">
-              <span>25 Sep 2022</span>
+              <span>{t("span1")}</span>
               <Link to={`/blog/blog_info_1`} onClick={() => window.scrollTo(0, 0)}>
                 <img src={shevronRight} alt="" className="shevronRight" width={30} height={30} />
               </Link>
@@ -68,7 +68,7 @@ function Blog() {
               {t("Top_5_spots_description")}
             </p>
             <div className="Blog_col_info_col">
-              <span>11 Feb 2022</span>
+              <span>{t("span2")}</span>
               <Link to={`/blog/blog_info_2`} onClick={() => window.scrollTo(0, 0)}>
                 <img src={shevronRight} alt="" className="shevronRight" width={30} height={30} />
               </Link>
@@ -93,7 +93,7 @@ function Blog() {
               {t("Summer_is_more_than")}
             </p>
             <div className="Blog_col_info_col">
-              <span>31 Jul 2022</span>
+              <span>{t("span3")}</span>
               <Link to={`/blog/blog_info_3`} onClick={() => window.scrollTo(0, 0)}>
                 <img src={shevronRight} alt="" className="shevronRight" width={30} height={30} />
               </Link>

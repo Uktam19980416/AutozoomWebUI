@@ -6,111 +6,108 @@ import addImg from "../../assets/images/services_in.jpg";
 
 //CheckedImg
 import checkedImg from "../../assets/images/checkedImg.png";
+import { t } from "i18next";
 
 function Add2() {
   return (
     <div className="Add2">
       <div className="Add2_head">
         <a href="/" className="Add2_head_link">
-          Luxury Cars for Rent in Dubai/ Services/ Sports Car Rental Dubai Style
-          Tour in Dubai
+          <span>{t("addMainLink1")}</span> <span>{t("addMainLink2")}</span>
         </a>
         <h1 className="Add2_header">
-          Sports Car Rental Dubai Style Tour in Dubai
+         {t("addHeader")}
         </h1>
       </div>
       <div className="Add2_row">
         <div className="Add2_col">
           <img src={addImg} className="Add2_col_img" alt="" />
-          <h2 className="Add2_col_type">Basic</h2>
+          <h2 className="Add2_col_type">{t("addBasic")}</h2>
           <div className="Add2_col_price">
             <span className="Add2_col_price_cost">1000</span>
-            <span className="Add2_col_price_seat">one person</span>
+            <span className="Add2_col_price_seat">{t("oneP")}</span>
           </div>
           <div className="Add2_col_text">
             <p>
-              Dune buggies in Dubai Book your ride on the most exciting
-              adventure activity to hit the desert and later pamper your self to a traditional Arabian hospitality.
+             {t("addP1")}
             </p>
           </div>
-          <h3 className="Add2_col_head_info">Package Inclusions:</h3>
+          <h3 className="Add2_col_head_info">{t("package")}:</h3>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Premium Transfer to camp</span>
+            <span>{t("packIn1")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Dune Buggy riding 1.5 hours</span>
+            <span>{t("packIn2")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Cuadro 15 min</span>
+            <span>{t("packIn3")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Falcone shoting</span>
+            <span>{t("packIn4")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Camel</span>
+            <span>{t("packIn5")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>VIP room</span>
+            <span>{t("packIn6")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Fruits, Drinks, BBQ</span>
+            <span>{t("packIn7")}</span>
           </div>
           <div className="Add2_col_main_btn">
-            <button>BOOK NOW</button>
+          <a href="tel:+971(55)8462124"><button>{t("packBtn")}</button></a>
           </div>
         </div>
         <div className="Add2_col">
           <img src={addImg} className="Add2_col_img" alt="" />
-          <h2 className="Add2_col_type">Basic</h2>
+          <h2 className="Add2_col_type">{t("addMedium")}</h2>
           <div className="Add2_col_price">
             <span className="Add2_col_price_cost">2000</span>
-            <span className="Add2_col_price_seat">two person</span>
+            <span className="Add2_col_price_seat">{t("twoP")}</span>
           </div>
           <div className="Add2_col_text">
             <p>
-              Dune buggies in Dubai Book your ride on the most exciting
-              adventure activity to hit the desert and later pamper your self to
-              a traditional Arabian hospitality.
+             {t("addP1")}
             </p>
           </div>
-          <h3 className="Add2_col_head_info">Package Inclusions:</h3>
+          <h3 className="Add2_col_head_info">{t("package")}:</h3>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Premium Transfer to camp</span>
+            <span>{t("packIn1")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Dune Buggy riding 1.5 hours</span>
+            <span>{t("packIn2")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Cuadro 15 min</span>
+            <span>{t("packIn3")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Falcone shoting</span>
+            <span>{t("packIn4")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Camel</span>
+            <span>{t("packIn5")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>VIP room</span>
+            <span>{t("packIn6")}</span>
           </div>
           <div className="Add2_col_status">
             <img src={checkedImg} width={45} height={25} alt="" />
-            <span>Fruits, Drinks, BBQ</span>
+            <span>{t("packIn7")}</span>
           </div>
           <div className="Add2_col_main_btn">
-            <button>BOOK NOW</button>
+            <a href="tel:+971(55)8462124"><button>{t("packBtn")}</button></a>
           </div>
         </div>
       </div>

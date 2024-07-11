@@ -21,7 +21,7 @@ const CarsAll = ({ filteredCars = [] }) => {
 
   return (
     <div className="cars-all">
-      <h1 className="cars-all-header">All Cars</h1>
+      <h1 className="cars-all-header">{t("allCars")}</h1>
       <div className="carsAll_container__">
         <div className="Cars_container_main_cars2">
           {displayedCars.length > 0 ? (
@@ -48,7 +48,7 @@ const CarsAll = ({ filteredCars = [] }) => {
                     </h5>
                     <p>
                       <span className="Cars_container_main_car_price_in_aed2">
-                        AED {car.price_in_aed}
+                        {t("AED")} {car.price_in_aed}
                       </span>
                       <span className="Cars_container_main_car_price_in_usd2">
                         / $ {car.price_in_usd}
@@ -78,7 +78,7 @@ const CarsAll = ({ filteredCars = [] }) => {
               </div>
             ))
           ) : (
-            <p>No cars found</p>
+            <p>{t("noCars")}</p>
           )}
         </div>
       </div>

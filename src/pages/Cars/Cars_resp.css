@@ -27,11 +27,14 @@
   .Cars_container_main#carsMain.carsMainBlock {
     display: none;
   }
+  .Cars_sidebar_buttons {
+    padding-bottom: 30px;
+  }
   .Cars_sidebar_buttons_reset {
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
   .Cars_sidebar_buttons_apply {
-    padding: 15px 20px;
+    padding: 15px 10px;
   }
 }
 
@@ -64,6 +67,15 @@
   .Cars_container_main#carsMain.carsMainBlock {
     display: none;
   }
+  .Cars_sidebar_buttons {
+    padding-bottom: 30px;
+  }
+  .Cars_sidebar_buttons_reset {
+    padding: 15px 10px;
+  }
+  .Cars_sidebar_buttons_apply {
+    padding: 15px 10px;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
@@ -94,6 +106,9 @@
   }
   .Cars_container_main#carsMain.carsMainBlock {
     display: none;
+  }
+  .Cars_sidebar_buttons {
+    padding-bottom: 30px;
   }
 }
 
@@ -128,6 +143,9 @@
   .Cars_container_main#carsMain.carsMainBlock {
     display: none;
   }
+  .Cars_sidebar_buttons {
+    padding-bottom: 30px;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
@@ -146,6 +164,9 @@
     width: 100%;
     margin: 0 auto;
     height: auto;
+  }
+  .Cars_sidebar_buttons {
+    padding-bottom: 30px;
   }
   .Cars_sidebar_buttons_reset {
     padding: 15px 30px;
@@ -174,5 +195,8 @@
     width: 68%;
     margin: 0;
     height: auto;
+  }
+  .Cars_sidebar_buttons {
+    padding-bottom: 30px;
   }
 }

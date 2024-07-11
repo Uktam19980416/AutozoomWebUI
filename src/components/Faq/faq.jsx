@@ -75,7 +75,7 @@ function Faq() {
 
         <div className="dropdown" onClick={toggleDropdown5}>
           <div className={`arrow ${isOpen5 ? 'open' : ''}`}>➤</div>
-          <h2 className="heading">{t("fa11")}</h2>
+          <h2 className="heading">{t("faq11")}</h2>
         </div>
         {isOpen5 ? (
           <div className="content">

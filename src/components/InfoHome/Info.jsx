@@ -11,7 +11,7 @@ function Info() {
           {t("info2")}
         </p>
 
-        <h2 className="info__title">What are the requirements to rent a luxury car in Dubai?</h2>
+        <h2 className="info__title">{t("info4")}</h2>
 
         <p className="info__text">
          {t("info3")}

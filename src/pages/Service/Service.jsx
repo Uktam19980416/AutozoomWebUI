@@ -26,7 +26,7 @@ function Services() {
           <img src={service1} className="serviceImg" alt="" />
           <div className="services_sub_main_space">
             <h4 className="services_sub_main_info">
-           {t("servicesCard2")}
+           {t("serviceCard2")}
             </h4>
             <p className="services_sub_main_text">
             {t("servicesCard3")}
@@ -37,7 +37,7 @@ function Services() {
                 onClick={() => window.scrollTo({ top: 0 })}
                 className="services_sub_main_link"
               >
-                {t("servicesCard4")}{" "}
+                {t("servicesCard4")}
               </Link>
               <Link
                 to={"/services/sport_car_rent"}

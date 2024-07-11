@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
+import { t } from "i18next";
 import "./BlogInfo.css";
 import "./BlogInfo_resp.css";
 
@@ -9,8 +10,7 @@ function BlogInfo({ header, main_info, bHead, src, bInfo }) {
       <div className="BlogInfo_head">
         <a href="/" className="BlogInfo_head_link">
           <span>
-            Luxory Cars for Dubai <span>/ Blog</span>{" "}
-            <span>/ Top 5 Reasons to Rent a Car Dubai</span>
+            {t("blogMainLink1")} <span> {t("blogMainLink2")}</span>
           </span>
         </a>
         <h1 className="BlogInfo_main_header">{header}</h1>
